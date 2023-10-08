@@ -1,0 +1,112 @@
+.navTitle{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #000;
+ }
+.canvas{height: 100rpx;}
+.table {
+  display: flex;
+  flex-direction: column;     /* 排列形式: 向下 */
+  /* transform: scaleX(0.47); 
+  transform-origin:top left;*/
+  font-size: 12px;
+}
+.tr {
+  display: flex;
+  flex-direction: row;
+  width: 1800rpx;
+  height: 40rpx;
+  border-bottom: 1rpx solid #b1adad; 
+}
+.th, .td {  /* 公有的属性 */
+  flex-direction: row;
+  flex-wrap: wrap;            /* 自动换行 */
+  /* width: 25%;					4个25%相加刚好100% */
+  text-align: center;         /* 文本居中 */
+  /* justify-content:center;     主轴居中 */
+  /* align-items: center;        交叉轴居中 */
+
+}
+
+.th {
+ 
+  background-color:#B3CCF4;   /* 背景色 */
+}
+
+.td {
+  background-color:#edf3e9;   /* 背景色 */
+}
+.bd-n{ border: none;}
+.bd-c1{ border-right: 1rpx solid #3b3939;}
+
+.bd-c2{ border-right: 1rpx solid #b1adad;}
+.bm-c{ border-bottom: 1rpx solid #b1adad;}
+.bg-w{background: snow;}
+.bg-g{background: #E6F3F9;}
+.sambg{background: #8014e6;}
+.linkbgx{background: #29e4eb;}
+.linkbgy{background: #3689f5; color: #edf3e9;}
+.line{
+  /* width:100px;
+  transform: rotate(270rad); */
+  position:absolute;
+  left:50%;
+  top:50%;
+  height:'1px';
+  line-height: 1px;
+  margin-top: -1px;
+  box-sizing: border-box;
+  background-color:#CDC1A6;
+  transform-origin: 'left center';
+  pointer-events: none;
+  z-index: 10;
+}
+.lableNum{
+  /* position: relative; */
+}
+
+
+
+.bottom {
+    /* position: fixed;
+
+    bottom: calc(constant(safe-area-inset-bottom) + 20px);
+    bottom: calc(env(safe-area-inset-bottom) + 20px); */
+    margin-top: 40rpx;
+    padding-bottom: 40rpx;
+    left: 0;
+    right: 0;
+    z-index:2000;
+}
+
+.bottom .button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: #f2ad68;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    margin-left: 10px;
+    width: calc((100% - 30px) / 2);
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.bottom .button button:not([size=mini]) {
+    background: none;
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.bottom .button:nth-of-type(2) {
+    background: #ea5a35;
+}

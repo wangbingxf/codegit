@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "welfare_lottery": "/pages/component/welfare_lottery/index",
+        "sports_lottery": "/pages/component/sports_lottery/index"
+    },
+    "navigationBarTitleText": "彩票历史开奖信息",
+    "navigationBarBackgroundColor": "#fa6c4f",
+    "navigationBarTextStyle": "white"
+}

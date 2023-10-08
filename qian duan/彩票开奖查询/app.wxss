@@ -1,0 +1,8 @@
+page {
+    background: #fa6c4f;
+}
+
+ 
+.clear {
+    clear: both;
+}

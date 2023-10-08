@@ -1,0 +1,127 @@
+<!--pages/trend/1/index.wxml-->
+<view class="navTitle">7星彩走势图</view>
+<scroll-view class="table" scroll-x="true">
+<view class="table">
+  
+  <view class="tr bg-w bd-n">
+<view class="th qh_w2 bg bd-c1">期</view>
+<view class="th zh_w bg bd-c1 bm-c">第一位</view>
+<view class="th zh_w bd-c1 bm-c">第二位</view>
+<view class="th zh_w bd-c1 bm-c">第三位</view>
+<view class="th zh_w bd-c1 bm-c">第四位</view>
+<view class="th zh_w bd-c1 bm-c">第五位</view>
+<view class="th zh_w bd-c1 bm-c">第六位</view>
+<view class="th bk_w bd-c1 bm-c">后区</view>
+</view>
+<view class="tr bg-w">
+<view class="th qh_w2 bg bd-c1">号</view>
+      <block wx:for="{{Localtion}}">
+        <view class="th bd-c2 n_w" wx:if="{{item<9}}">{{item}}</view>
+        <view class="th n_w bd-c1" wx:else>{{item}}</view>
+      </block>
+      <block wx:for="{{Localtion}}">
+        <view class="th bd-c2 n_w" wx:if="{{item<9}}">{{item}}</view>
+        <view class="th n_w bd-c1" wx:else>{{item}}</view>
+      </block>
+      <block wx:for="{{Localtion}}">
+        <view class="th bd-c2 n_w" wx:if="{{item<9}}">{{item}}</view>
+        <view class="th n_w bd-c1" wx:else>{{item}}</view>
+      </block>
+      <block wx:for="{{Localtion}}">
+        <view class="th bd-c2 n_w" wx:if="{{item<9}}">{{item}}</view>
+        <view class="th n_w bd-c1" wx:else>{{item}}</view>
+      </block>
+      <block wx:for="{{Localtion}}">
+        <view class="th bd-c2 n_w" wx:if="{{item<9}}">{{item}}</view>
+        <view class="th n_w bd-c1" wx:else>{{item}}</view>
+      </block>
+      <block wx:for="{{Localtion}}">
+        <view class="th bd-c2 n_w" wx:if="{{item<9}}">{{item}}</view>
+        <view class="th n_w bd-c1" wx:else>{{item}}</view>
+      </block>
+      <view class="th bd-c2 n_w" wx:for="{{bendk}}" wx:key="gewei">{{item}}</view>
+</view>
+<block wx:for="{{listData}}" wx:key="{{code}}" wx:for-item="lucky">
+  <view class="tr bg-g" >
+    <view class="td bd-c1 qh_w2">{{lucky.code}}</view>
+    <block wx:for="{{Localtion}}" wx:key="humder">
+      <view class="td bd-c2 n_w" wx:if="{{item < 9}}">
+        <text wx:if="{{item  == lucky.red[0]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      <view class="td bd-c1 n_w" wx:else>
+        <text wx:if="{{item  == lucky.red[0]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+    </block>
+    <block wx:for="{{Localtion}}" wx:key="humder">
+      <view class="td bd-c2 n_w" wx:if="{{item < 9}}">
+        <text wx:if="{{item  == lucky.red[1]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      <view class="td bd-c1 n_w" wx:else>
+        <text wx:if="{{item  == lucky.red[1]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+    </block>
+    <block wx:for="{{Localtion}}" wx:key="shiwei">
+      <view class="td bd-c2 n_w" wx:if="{{item < 9}}">
+        <text wx:if="{{item  == lucky.red[2]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      <view class="td bd-c1 n_w" wx:else>
+        <text wx:if="{{item  == lucky.red[2]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+    </block>
+    <block wx:for="{{Localtion}}" wx:key="gewei">
+      <view class="td bd-c2 n_w" wx:if="{{item < 9}}">
+        <text wx:if="{{item  == lucky.red[3]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      <view class="td bd-c1 n_w" wx:else>
+        <text wx:if="{{item  == lucky.red[3]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+  </block>
+  <block wx:for="{{Localtion}}" wx:key="gewei">
+      <view class="td bd-c2 n_w" wx:if="{{item < 9}}">
+        <text wx:if="{{item  == lucky.red[4]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      <view class="td bd-c1 n_w" wx:else>
+        <text wx:if="{{item  == lucky.red[4]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+  </block>
+  <block wx:for="{{Localtion}}" wx:key="gewei">
+      <view class="td bd-c2 n_w" wx:if="{{item < 9}}">
+        <text wx:if="{{item  == lucky.red[5]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      <view class="td bd-c1 n_w" wx:else>
+        <text wx:if="{{item  == lucky.red[5]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+  </block>
+  <block wx:for="{{bendk}}" wx:key="gewei">
+      <view class="td bd-c2 n_w" wx:if="{{item < 13}}">
+        <text wx:if="{{item  == lucky.red[6]}}">{{item}}</text>
+       
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      <view class="td bd-c1 n_w" wx:else>
+        <text wx:if="{{item  == lucky.red[6]}}">{{item}}</text>
+
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+  </block>
+  </view>
+  
+</block>
+</view>
+</scroll-view>
+<view class="bottom">
+    <view class="button"><button open-type="share">推荐好友加幸运</button></view>
+ 
+</view>

@@ -1,0 +1,55 @@
+<!--pages/trend/1/index.wxml-->
+<view class="navTitle">彩票走势图</view>
+<view class="table">
+
+  <view class="tr bg-w">
+    <view class="th qh_w2 bd-c1" style="height: 34rpx;">期</view>
+    <view class="th red_w  bd-c1">红球区</view>
+    <view class="th blue_w">篮球区</view>
+  </view>
+<view class="tr bg-w">
+  <view class="th qh_w2 bd-c1" style="height: 34rpx;">号</view>
+  <block  wx:for="{{redball}}">
+    <view class="th n_w bd-c2" wx:if="{{item<33}}">{{item}}</view>
+    <view class="th n_w bd-c1" wx:else>{{item}}</view>
+  </block>
+  <view class="th bd-c2 n_w" wx:for="{{blueball}}">{{item}}</view>
+</view>
+<block wx:for="{{listData}}" wx:key="{{code}}" wx:for-item="lucky"  wx:for-index="luckyid">
+  <view class="tr bg-g" >
+    <view class="td bd-c1 qh_w2">{{lucky.code}}</view>
+    <block wx:for="{{redball}}" wx:for-item="redball">
+      <block wx:if="{{redball == 33 || redball==11 || redball==22}}">
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:if='{{redball == lucky.red[0]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[1]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[2]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[3]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[4]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[5]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:else><text  decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text></view>
+      </block>
+      <block wx:else>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:if='{{redball == lucky.red[0]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[1]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[2]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[3]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[4]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[5]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:else><text  decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text></view>
+      </block>
+
+    </block>
+    <block class="td n_w" wx:for="{{blueball}}" wx:for-item="blueball">
+
+        <view class="td bd-c2 n_w" wx:if='{{blueball == lucky.blue}}'>{{blueball}}</view>
+        <view class="td bd-c2 n_w" wx:else><text  decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text></view>
+    </block>
+    
+  </view>
+  
+</block>
+</view>
+<view class="bottom">
+    <view class="button"><button open-type="share">推荐好友加幸运</button></view>
+
+</view>

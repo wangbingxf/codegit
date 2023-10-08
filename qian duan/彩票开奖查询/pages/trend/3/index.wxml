@@ -1,0 +1,105 @@
+<!--pages/trend/1/index.wxml-->
+<view class="navTitle">排列3彩票走势图</view>
+<canvas
+  type="2d"
+  id="canvas"
+ style="position: absolute; left:  {{mleft}}; top: 0; width: 100%; display:block; box-sizing: border-box; z-index: 500; height: {{canvasHeight}}rpx;">
+ </canvas>
+<view class="table">
+<view class="tr bg-w bd-n">
+<view class="th qh_w2 bg bd-c1">期</view>
+<view class="th kjh_w1 bg bd-c1">开奖</view>
+<view class="th hz_w bg bd-c1">和</view>
+<view class="th zh_w bg bd-c1">组选分布</view>
+<view class="th qh_w bg bd-c1">和</view>
+<view class="th qh_w bg bd-c1">奇</view>
+<view class="th qh_w bg bd-c1">大</view>
+<view class="th qh_w3 bg bd-c1">012</view>
+<view class="th qh_w bg bd-c1">跨</view>
+<view class="th zh_w bd-c1">百位</view>
+<view class="th zh_w bd-c1">十位</view>
+<view class="th zh_w bd-c1">个位</view>
+</view>
+<view class="tr bg-w">
+<view class="th qh_w2 bg bd-c1">号</view>
+<view class="th kjh_w bg bd-c1"><text decode="{{true}}" space="{{true}}">号&nbsp;&nbsp;</text></view>
+<view class="th hz_w bg bd-c1">值</view>
+      <block wx:for="{{zx}}" wx:for-index="index">
+        <view class="th {{item < 9? 'bd-c2':'bd-c1'}} n_w">{{item}}</view>
+       
+      </block>
+<view class="th qh_w bg bd-c1">尾</view>
+<view class="th qh_w bg bd-c1">偶</view>
+<view class="th qh_w bg bd-c1">小</view>
+<view class="th qh_w3 bg bd-c1">路</view>
+<view class="th qh_w bg bd-c1">度</view>
+
+      <block wx:for="{{hunder}}" wx:for-index="index">
+        <view class="th {{item < 9? 'bd-c2':'bd-c1'}} n_w">{{item}}</view>
+     
+      </block>
+
+      <block wx:for="{{shiwei}}" wx:for-index="index">
+        <view class="th {{item < 9? 'bd-c2':'bd-c1'}} n_w">{{item}}</view>
+        
+      </block>
+
+
+      <block wx:for="{{gewei}}" wx:for-index="index">
+        <view class="th {{item < 9? 'bd-c2':'bd-c1'}} n_w">{{item}}</view>
+    
+      </block>
+
+</view>
+<block wx:for="{{listData}}" wx:key="{{code}}" wx:for-item="lucky" wx:for-index="luckyid">
+  <view class="tr bg-g" >
+    <view class="td bd-c1 qh_w2">{{lucky.code}}</view>
+    <block wx:for="{{lucky.luckynum}}" wx:for-index="index">
+      <view class="td {{index < 9? 'bd-c2':'bd-c1'}} n_w {{linkData[luckyid].luck}}">{{item}}</view>
+    </block>
+    
+    <view class="td bd-c1 hz_w">{{lucky.type}}</view>
+    <block wx:for="{{zx}}" wx:for-index="index">
+      <view class="td {{item < 9? 'bd-c2':'bd-c1'}} n_w {{linkData[luckyid].linkx[item]}} {{linkData[luckyid].linky[item]}}">
+        <text wx:if="{{item  == lucky.luckynum[0]}}">{{item}}</text>
+        <text wx:elif ="{{item  == lucky.luckynum[1]}}">{{item}}</text>
+        <text wx:elif ="{{item  == lucky.luckynum[2]}}">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+      
+    </block>
+
+    <view class="td bd-c1 qh_w">{{lucky.hw}}</view>
+    <view class="td bd-c1 qh_w">{{lucky.jo}}</view>
+    <view class="td bd-c1 qh_w">{{lucky.dx}}</view>
+    <view class="td bd-c1 qh_w3">{{lucky.l}}</view>
+    <view class="td bd-c1 qh_w">{{lucky.kd}}</view>
+    <block wx:for="{{hunder}}" wx:key="humder">
+      <view class="td {{item < 9? 'bd-c2':'bd-c1'}} n_w">
+        <view wx:if="{{item  == lucky.luckynum[0]}}" class="lableNum">{{item}}
+       </view>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+
+    </block>
+    <block wx:for="{{shiwei}}" wx:key="shiwei">
+      <view class="td {{item < 9? 'bd-c2':'bd-c1'}} n_w">
+        <text wx:if="{{item  == lucky.luckynum[1]}}"  class="lableNum2">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+     
+    </block>
+    <block wx:for="{{gewei}}" wx:key="gewei">
+      <view class="td {{item < 9? 'bd-c2':'bd-c1'}} n_w">
+        <text wx:if="{{item  == lucky.luckynum[2]}}"  class="lableNum3">{{item}}</text>
+        <text wx:else decode="{{true}}" space="{{true}}">&nbsp;</text>
+      </view>
+  </block>
+  </view>
+  
+</block>
+</view>
+<view class="bottom">
+    <view class="button"><button open-type="share">推荐好友加幸运</button></view>
+    <view class="button"><button bindtap="openclose">{{opentitle}}</button></view>
+</view>

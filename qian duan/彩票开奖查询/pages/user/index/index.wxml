@@ -1,0 +1,50 @@
+<view class="container">
+    <view class="header">
+        <view class="header_img">
+            <image src="../../../static/header_img.png" wx:if="{{!user}}"></image>
+            <image src="{{user.avatar}}" wx:else="{{user}}"></image>
+        </view>
+        <view class="header_text" wx:if="{{!user}}"><button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">点击登录</button></view>
+        <view class="header_text" wx:else="{{user}}">{{user.nickname}}</view>
+        <view class="clear"></view>
+        <view class="week">
+            <image src="../../../static/week_icon.png"></image>
+            <text>{{week}}</text>
+        </view>
+    </view>
+    <view class="menu">
+        <view class="menu_item">
+            <image class="icon" src="../../../static/menu_1.png"></image>
+            <button open-type="contact">联系我们</button>
+            <image class="arrow" src="../../../static/arrow.png"></image>
+            <view class="clear"></view>
+        </view>
+        <view class="menu_item" bindtap="exonerationTap">
+            <image class="icon" src="../../../static/menu_2.png"></image>
+            <text>免责声明</text>
+            <image class="arrow" src="../../../static/arrow.png"></image>
+            <view class="clear"></view>
+        </view>
+        <view class="menu_item" bindtap="logoutTap">
+            <image class="icon" src="../../../static/menu_3.png"></image>
+            <text>注销登录</text>
+            <image class="arrow" src="../../../static/arrow.png"></image>
+            <view class="clear"></view>
+        </view>
+        <view class="menu_item">
+            <image class="icon" src="../../../static/menu_4.png"></image>
+            <button open-type="share">推荐好友</button>
+            <image class="arrow" src="../../../static/arrow.png"></image>
+            <view class="clear"></view>
+        </view>
+        <view class="menu_item" wx:for="{{shareapp}}">
+           <view bindtap="skipminipro" data-appid="{{item.appid}}" >
+            <view class="appimg"> <image  src="{{item.src}}" mode="aspectFit"></image></view>
+
+            <view class="apptext" ><text>{{item.appname}}</text></view>
+            </view>
+            <image class="arrow" src="../../../static/arrow.png"></image>
+            <view class="clear"></view>
+        </view>
+    </view>
+</view>

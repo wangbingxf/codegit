@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/user/index/index",
+        "pages/history/index",
+        "pages/detail/index",
+        "pages/user/exoneration/exoneration",
+        "pages/trend/0/index",
+        "pages/trend/1/index",
+        "pages/trend/2/index",
+        "pages/trend/3/index",
+        "pages/trend/4/index",
+        "pages/trend/5/index",
+        "pages/trend/6/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Weixin",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999999",
+        "selectedColor": "#fa6c4f",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "彩票",
+                "iconPath": "static/item_1.png",
+                "selectedIconPath": "static/item_1_select.png"
+            },
+            {
+                "pagePath": "pages/user/index/index",
+                "text": "我的",
+                "iconPath": "static/item_2.png",
+                "selectedIconPath": "static/item_2_select.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

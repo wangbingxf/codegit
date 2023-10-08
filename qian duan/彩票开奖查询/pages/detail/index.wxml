@@ -1,0 +1,39 @@
+<view class="container">
+    <view class="list">
+        <view class="lottery_item_title" wx:if="{{row.type == 0}}">双色球</view>
+        <view class="lottery_item_title" wx:if="{{row.type == 1}}">大乐透</view>
+        <view class="lottery_item_title" wx:if="{{row.type == 2}}">3D</view>
+        <view class="lottery_item_title" wx:if="{{row.type == 3}}">排列三</view>
+        <view class="lottery_item_title" wx:if="{{row.type == 4}}">排列五</view>
+        <view class="lottery_item_title" wx:if="{{row.type == 5}}">七星彩</view>
+        <view class="lottery_item_title" wx:if="{{row.type == 6}}">七乐彩</view>
+        <view class="title">
+            <text>{{row.code}}期</text>
+            <text>{{row.date}}</text>
+            <text>周{{row.week}}</text>
+        </view>
+        <view class="lottery_item_ball">
+            <view class="lottery_item_ball_red" wx:for="{{row.ball.red}}">{{item}}</view>
+            <view class="lottery_item_ball_blue" wx:for="{{row.ball.blue}}" wx:if="{{item}}">{{item}}</view>
+            <view class="clear"></view>
+        </view>
+    </view>
+    <view class="item">
+        <view class="item_text">
+            <text wx:if="{{row.sales != 0}}">本期销售：{{row.sales}}</text>
+            <text wx:if="{{row.poolmoney != 0}}">奖池累计：{{row.poolmoney}}</text>
+        </view>
+        <!-- 双色球、3D、七乐彩 -->
+        <welfare_lottery wx:if="{{row.type == 0 || row.type == 2 || row.type == 6}}" list="{{row.prizegrades}}" type="{{row.type}}"></welfare_lottery>
+        <!-- 大乐透、排列三、排列五、七星彩 -->
+        <sports_lottery wx:if="{{row.type == 1 || row.type == 3 || row.type == 4 || row.type == 5}}" list="{{row.prizegrades}}" type="{{row.type}}"></sports_lottery>
+        <view class="adv" wx:if="{{row.bannerAdUnitId}}">
+            <ad unit-id="{{row.bannerAdUnitId}}"></ad>
+        </view>
+    </view>
+</view>
+
+<view class="bottom">
+    <view class="button"><button open-type="share">推荐好友</button></view>
+    <view class="button" bindtap="historyTap">历史开奖</view>
+</view>

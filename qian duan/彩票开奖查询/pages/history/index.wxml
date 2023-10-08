@@ -1,0 +1,30 @@
+<view class="container">
+    <block wx:for="{{list}}">
+        <view class="list" data-index="{{index}}" bindtap="changeIsShow">
+            <view class="title">
+                <text>{{item.code}}期</text>
+                <text>{{item.date}}</text>
+                <text>周{{item.week}}</text>
+            </view>
+            <view class="lottery_item_ball">
+                <view class="lottery_item_ball_red" wx:for="{{item.ball.red}}">{{item}}</view>
+                <view class="lottery_item_ball_blue" wx:for="{{item.ball.blue}}" wx:if="{{item}}">{{item}}</view>
+                <view class="clear"></view>
+            </view>
+            <view class="action">
+                <image wx:if="{{item.isShow}}" src="../../static/down.png"></image>
+                <image wx:if="{{!item.isShow}}" src="../../static/up.png"></image>
+            </view>
+        </view>
+        <view class="item" wx:if="{{item.isShow}}">
+            <view class="item_text">
+                <text wx:if="{{item.sales != 0}}">本期销售：{{item.sales}}</text>
+                <text wx:if="{{item.poolmoney != 0}}">奖池累计：{{item.poolmoney}}</text>
+            </view>
+            <!-- 双色球、3D、七乐彩 -->
+            <welfare_lottery wx:if="{{item.type == 0 || item.type == 2 || item.type == 6}}" list="{{item.prizegrades}}" type="{{item.type}}"></welfare_lottery>
+            <!-- 大乐透、排列三、排列五、七星彩 -->
+            <sports_lottery wx:if="{{item.type == 1 || item.type == 3 || item.type == 4 || item.type == 5}}" list="{{item.prizegrades}}" type="{{item.type}}"></sports_lottery>
+        </view>
+    </block>
+</view>

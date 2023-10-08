@@ -1,0 +1,25 @@
+page {
+    background: #fff;
+}
+
+.title {
+    text-align: center;
+    line-height: 80px;
+    font-weight: 700;
+}
+
+.content {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+.btn {
+    color: #fff;
+    text-align: center;
+    background: #ff685d;
+    line-height: 40px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+}

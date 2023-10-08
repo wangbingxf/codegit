@@ -1,0 +1,14 @@
+<view class="table">
+    <view class="tr">
+        <view class="th">奖项</view>
+        <view class="th">中奖注数</view>
+        <view class="th">单注奖金</view>
+        <view class="clear"></view>
+    </view>
+    <view class="tr" wx:for="{{list}}">
+        <view class="td">{{item.type}}</view>
+        <view class="td">{{item.typenum}}</view>
+        <view class="td">{{item.typemoney}}</view>
+        <view class="clear"></view>
+    </view>
+</view>

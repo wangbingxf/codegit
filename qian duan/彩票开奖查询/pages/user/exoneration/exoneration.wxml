@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="title">免责声明</view>
+    <view class="content">
+        <rich-text nodes="{{exoneration}}"></rich-text>
+    </view>
+    <view class="btn" bindtap="backTap">返回</view>
+</view>

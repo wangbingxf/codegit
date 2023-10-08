@@ -1,0 +1,7 @@
+/* pages/trend/1/index.wxss */
+@import '../table.wxss';
+
+.qh_w2{width:50rpx;}
+.n_w{width:25rpx}
+.zh_w{width:270rpx;}
+.bk_w{width:378rpx;}

@@ -1,0 +1,50 @@
+<view class="container">
+    <view class="banner">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}">
+            <swiper-item wx:for="{{bannerList}}">
+                <image src="{{item.image}}"></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="message">
+        <view class="message_icon">
+            <text>公告：</text>
+        </view>
+        <view class="message_text">
+            <view style="transform: translateX(-{{distance}}px);">
+                <text id="message">{{message}}</text>
+                <text>{{message}}</text>
+            </view>
+        </view>
+        <view class="clear"></view>
+    </view>
+    <view class="lottery_list">
+        <view class="lottery_item" wx:for="{{lotteryList}}" data-id="{{item.id}}" bindtap="detailTap">
+          <view class="history" data-type="{{item.type}}" catchtap="trendTap" style="right: 190px;width: 60px;text-align: center;">走势图</view>
+            <view class="history" data-type="{{item.type}}" catchtap="historyTap" style="right: 100px;width: 60px;text-align: center;">历史开奖</view>
+            <block wx:if="{{item.subscription == 1}}">
+                <view class="history" data-type="{{item.type}}" style="width: 60px;">已订阅通知</view>
+            </block>
+            <block wx:else>
+                <view class="history" data-type="{{item.type}}" catchtap="subscriptionTap" style="width: 60px; text-align: center;">订阅通知</view>
+            </block>
+            <view class="lottery_item_title" wx:if="{{item.type == 0}}">双色球</view>
+            <view class="lottery_item_title" wx:if="{{item.type == 1}}">大乐透</view>
+            <view class="lottery_item_title" wx:if="{{item.type == 2}}">3D</view>
+            <view class="lottery_item_title" wx:if="{{item.type == 3}}">排列三</view>
+            <view class="lottery_item_title" wx:if="{{item.type == 4}}">排列五</view>
+            <view class="lottery_item_title" wx:if="{{item.type == 5}}">七星彩</view>
+            <view class="lottery_item_title" wx:if="{{item.type == 6}}">七乐彩</view>
+            <view class="lottery_item_code">{{item.code}}期 {{item.date}} 周{{item.week}}</view>
+            <view class="lottery_item_ball">
+                <view class="lottery_item_ball_red" wx:for="{{item.ball.red}}">{{item}}</view>
+                <view class="lottery_item_ball_blue" wx:for="{{item.ball.blue}}" wx:if="{{item}}">{{item}}</view>
+                <view class="clear"></view>
+            </view>
+        </view>
+    </view>
+    <view class="adv" wx:if="{{bannerAdUnitId}}">
+        <ad unit-id="{{bannerAdUnitId}}"></ad>
+    </view>
+    <view class="copyright">{{copyright}}</view>
+</view>

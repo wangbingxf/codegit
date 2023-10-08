@@ -1,0 +1,59 @@
+<!--pages/trend/1/index.wxml-->
+<view class="navTitle">七乐彩走势图</view>
+<view class="table">
+    <view class="tr bg-w bd-n">
+        <view class="th qh_w2 bd-c1">期</view>
+        <view class="th red_w bd-c1 bm-c">号码分布</view>
+        <view class="th qh_w bd-c1">和</view>
+        <view class="th qh_w bd-c1">奇</view>
+        <view class="th qh_w bd-c1">大</view>
+    </view>
+<view class="tr">
+    <view class="th qh_w2 bd-c1">号</view>
+    <block wx:for="{{redball}}" wx:key="rb">
+      <view class="td n_w bd-c1"  wx:if="{{item ==10 || item ==20}}">{{item}}</view>
+      <view class="td n_w bd-c2" wx:else>{{item}}</view>
+    </block>
+    <view class="th qh_w bd-c1">值</view>
+    <view class="th qh_w bd-c1">偶</view>
+    <view class="th qh_w bd-c1">小</view>
+</view>
+<block wx:for="{{listData}}" wx:key="{{code}}" wx:for-item="lucky" wx:for-index="luckyid">
+  <view class="tr bg-g" >
+    <view class="td qh_w2 bd-c1">{{lucky.code}}</view>
+    <block wx:for="{{redball}}" wx:for-item="redball">
+      <block wx:if="{{redball == 30 || redball == 10 || redball==20 }}">
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:if='{{redball == lucky.red[0]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[1]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[2]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[3]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[4]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[5]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[6]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[7]}}'>{{redball}}</view>
+        <view class="td bd-c1 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:else><text  decode="{{true}}" space="{{true}}">&nbsp;</text></view>
+      </block>
+      <block wx:else>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:if='{{redball == lucky.red[0]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[1]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[2]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[3]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[4]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[5]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[6]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:elif='{{redball == lucky.red[7]}}'>{{redball}}</view>
+        <view class="td bd-c2 n_w {{linkData[luckyid].linkx[redball]}} {{linkData[luckyid].linky[redball]}}" wx:else><text  decode="{{true}}" space="{{true}}">&nbsp;</text></view>
+      </block>
+
+    </block>
+    <view class="td bd-c1 qh_w">{{lucky.hz}}</view>
+    <view class="td bd-c1 qh_w">{{lucky.jo}}</view>
+    <view class="td bd-c1 qh_w">{{lucky.dx}}</view>
+  </view>
+  
+</block>
+</view>
+<view class="bottom">
+    <view class="button"><button open-type="share">推荐好友加幸运</button></view>
+
+</view>

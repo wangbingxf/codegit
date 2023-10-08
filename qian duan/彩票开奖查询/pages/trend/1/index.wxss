@@ -1,0 +1,12 @@
+/* pages/trend/1/index.wxss */
+@import '../table.wxss';
+.table{
+  transform: scaleX(0.56);
+  transform-origin:top left;
+ }
+.td{width:2000rpx}
+.qh_w{width:297rpx;}
+.qh_w2{width:60rpx;}
+.blue_w{width:324rpx;}
+.n_w{width:25rpx}
+
