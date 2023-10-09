@@ -1,0 +1,44 @@
+{include file="header.htm" /}
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="{if condition="'Sitecollect' == $Request.param.sc && 'index' == $Request.param.sa"}{:url("Weapp/index")}{else /}{:weapp_url("Sitecollect/Sitecollect/index")}{/if}" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>{$weappInfo['name']}</h3>
+                <h5></h5>
+            </div>
+            <ul class="tab-base nc-row">
+                <li>
+                    {eq name="$Request.param.sa" value="index"}
+                    <a href="javascript:void(0);" class="tab current"><span>任务列表</span></a>
+                    {else /}
+                    <a href="{:weapp_url("Sitecollect/Sitecollect/index")}" class="tab"><span>任务列表</span></a>
+                    {/eq}
+                </li>
+                <li>
+                    {range name="$Request.param.sa" value="export" type='in'}
+                    <a href="javascript:void(0);" class="tab current"><span>导出任务</span></a>
+                    {else /}
+                    <a href="{:weapp_url("Sitecollect/Sitecollect/export")}" class="tab"><span>导出任务</span></a>
+                    {/range}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ncap-form-default">
+        <dl class="row">
+            <dt class="tit">
+                <label for="list_rule">任务规则</label>
+            </dt>
+            <dd class="opt">
+                <textarea rows="20" cols="160" id="list_rule" style="height:450px;" >{$encode}</textarea>
+            </dd>
+        </dl>
+    </div>
+</div>
+{include file="footer.htm" /}

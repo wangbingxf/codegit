@@ -1,0 +1,233 @@
+{include file="header.htm" /}
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="edit_bar.htm" /}
+    <form class="form-horizontal" id="post_form" action="{:weapp_url('Sitecollect/Sitecollect/pageset')}" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label>分页获取</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="get_style2" class="cb-enable {if condition='$row.get_style eq 2'}selected{/if}">批量生成</label>
+                        <label for="get_style1" class="cb-disable {if condition='$row.get_style eq 1'}selected{/if}">手工输入</label>
+                        <input id="get_style2" name="get_style" value="2" type="radio" {if condition="$row.get_style eq 2"} checked="checked"{/if}>
+                        <input id="get_style1" name="get_style" value="1" type="radio" {if condition="$row.get_style eq 1"} checked="checked"{/if}>
+
+                    </div>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row"  id="urllist_data"  {if condition="$row.get_style eq 2"} style="display: none"{/if}>
+                <dt class="tit">
+                    <label for="urllist"><em>*</em>分页网址</label>
+                </dt>
+                <dd class="opt">
+                    <textarea rows="5" cols="80" id="urllist" name="urllist" style="height:80px;" placeholder="多篇文章使用换行区分，一行一个">{$row.urllist}</textarea>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row" id="urlrule_data"  {if condition="$row.get_style eq 1"} style="display: none"{/if}>
+                <dt class="tit">
+                    <label for="url_rule"><em>*</em>网址规则</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="url_rule" id="url_rule" value="{$row.url_rule}" placeholder="例：https://www.yourweb.com/new/list_{{id}}.html" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">格式参考：https://www.yourweb.com/new/list_{{id}}.html
+                        说明：{{id}}是固定格式，不可修改</p>
+                </dd>
+            </dl>
+            <dl class="row" id="min_data"  {if condition="$row.get_style eq 1"} style="display: none"{/if}>
+            <dt class="tit">
+
+            </dt>
+            <dd class="opt">
+                变量<font color='#ff0000'>{{id}}</font>为从
+                <input type="text" name="min_id" value="{$row.min_id}" id="min_id" style="width: 30px;">
+                到
+                <input type="text" name="max_id" value="{$row.max_id}" id="max_id" style="width: 30px;">
+                填写页码，每页递增：1
+            </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="list_rule"><em>*</em>列表正则代码</label>
+                </dt>
+                <dd class="opt">
+                    <textarea rows="5" cols="80" id="list_rule" name="list_rule" style="height:80px;" placeholder="&lt;div class=&quot;home_pro&quot;&gt; &lt;ul&gt;[内容] &lt;/ul&gt;">{$row.list_rule}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">[内容]为需要采集的区域</p>
+                    <p><a href="javascript:;" onclick="insert_neirong('list_rule')">>>插入通配标识"[内容]"</a></p>
+                </dd>
+            </dl>
+            <dl class="row">
+            <dt class="tit">
+                <label for="a_rule">链接规则</label>
+            </dt>
+            <dd class="opt">
+                必须包含：
+                <input type="text" name="a_involve" value="{$row.a_involve}" id="a_involve" style="width: 100px;">
+                不能包含：
+                <input type="text" name="a_exclusive" value="{$row.a_exclusive}" id="a_exclusive" style="width: 100px;">
+                <span class="err"></span>
+                <p class="notic">优先级高于（链接正则代码）</p>
+            </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="a_rule">链接正则代码<br>(选填)</label>
+                </dt>
+                <dd class="opt">
+                    <textarea rows="5" cols="80" id="a_rule" name="a_rule" style="height:80px;" placeholder=" &lt;a href=&quot;[内容]&quot;&gt;">{$row.a_rule}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">通配标识为需要采集的url</p>
+                    <p><a href="javascript:;" onclick="insert_neirong('a_rule')">>>插入通配标识"[内容]"</a></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>获取列表缩略图</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="is_list_litpic1" class="cb-enable {if condition='$row.is_list_litpic eq 1'}selected{/if}">是</label>
+                        <label for="is_list_litpic0" class="cb-disable {if condition='$row.is_list_litpic eq 0'}selected{/if}">否</label>
+                        <input id="is_list_litpic1" name="is_list_litpic" value="1" type="radio" {if condition="$row.is_list_litpic eq 1"} checked="checked"{/if}>
+                        <input id="is_list_litpic0" name="is_list_litpic" value="0" type="radio" {if condition="$row.is_list_litpic eq 0"} checked="checked"{/if}>
+                    </div>
+                    <p class="notic">列表只有一张相应图片可以不填写下面正则</p>
+                </dd>
+            </dl>
+            <dl class="row"  id="litpic_rule_data" {if condition="$row.is_list_litpic eq 0"} style="display: none"{/if}>
+                <dt class="tit">
+                    <label for="urllist">缩略图正则<br>(选填)</label>
+                </dt>
+                <dd class="opt">
+                    <textarea rows="5" cols="80" id="litpic_rule" name="litpic_rule" placeholder="&lt;img src=&quot;[内容]&quot;&gt; alt=&quot;&quot;" style="height:80px;">{$row.litpic_rule}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">通配标识为需要采集的图片url</p>
+                    <p><a href="javascript:;" onclick="insert_neirong('litpic_rule')">>>插入通配标识"[内容]"</a></p>
+                </dd>
+            </dl>
+            <!--<dl class="row">-->
+                <!--<dt class="tit">-->
+                    <!--<label>文章分页</label>-->
+                <!--</dt>-->
+                <!--<dd class="opt">-->
+                    <!--<div class="onoff">-->
+                        <!--<label for="is_page1" class="cb-enable {if condition='$row.is_page eq 1'}selected{/if}">是</label>-->
+                        <!--<label for="is_page0" class="cb-disable {if condition='$row.is_page eq 0'}selected{/if}">否</label>-->
+                        <!--<input id="is_page1" name="is_page" value="1" type="radio" {if condition="$row.is_page eq 1"} checked="checked"{/if}>-->
+                        <!--<input id="is_page0" name="is_page" value="0" type="radio" {if condition="$row.is_page eq 0"} checked="checked"{/if}>-->
+                    <!--</div>-->
+                    <!--<span class="err"></span>-->
+                    <!--<p class="notic">被采集的文章，是否存在单篇文章分页</p>-->
+                <!--</dd>-->
+            <!--</dl>-->
+            <!--<dl class="row"  id="page_a_rule_data" {if condition="$row.is_page eq 0"} style="display: none"{/if}>-->
+            <!--<dt class="tit">-->
+                <!--<label for="urllist">页面正则代码</label>-->
+            <!--</dt>-->
+            <!--<dd class="opt">-->
+                <!--<textarea rows="5" cols="80" id="page_a_rule" name="page_a_rule"  placeholder="http://www.dede58.com/a/dedejq/{{id}}.html"  style="height:80px;">{$row.page_a_rule}</textarea>-->
+                <!--<span class="err"></span>-->
+                <!--<p class="notic">{{id}}表示页面id</p>-->
+            <!--</dd>-->
+            <!--</dl>-->
+            <!--<dl class="row"  id="page_list_rule_data" {if condition="$row.is_page eq 0"} style="display: none"{/if}>-->
+                <!--<dt class="tit">-->
+                    <!--<label for="urllist">分页正则代码</label>-->
+                <!--</dt>-->
+                <!--<dd class="opt">-->
+                    <!--<textarea rows="5" cols="80" id="page_list_rule" name="page_list_rule" placeholder="http://www.dede58.com/a/dedejq/{{id}}_{{page}}.html" style="height:80px;">{$row.page_list_rule}</textarea>-->
+                    <!--<span class="err"></span>-->
+                    <!--<p class="notic">{{id}}表示页面id，{{page}}表示分页页码</p>-->
+                <!--</dd>-->
+            <!--</dl>-->
+            <div class="bot">
+                <input type="hidden" name="id" value="{$row.id}">
+                <a href="JavaScript:void(0);" onclick="checkForm(0);" class="ncap-btn-big ncap-btn-green">仅保存</a>
+                <a href="JavaScript:void(0);" onclick="checkForm(1);" class="ncap-btn-big ncap-btn-green" id="submitBtn">保存数据并预览</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    // 判断输入框是否为空
+    function checkForm(type){
+        var get_style = $('input[name="get_style"]:checked').val();
+        if (get_style == '1' && $('#urllist').val() == ''){
+            showErrorMsg('分页网址不能为空！');
+            $('#urllist').focus();
+            return false;
+        }else if(get_style == '2' && ($('#url_rule').val() == '' || $('#min_id').val() == '0' || $('#max_id').val() == '0')){
+            showErrorMsg('网址规则、id最小值、id最大值不能为空！');
+            $('#url_rule').focus();
+            return false;
+        }
+        if($('#list_rule').val() == ''){
+            showErrorMsg('列表正则代码不能为空！');
+            $('#list_rule').focus();
+            return false;
+        }
+//        if($('#a_rule').val() == ''){
+//            showErrorMsg('链接正则代码不能为空！');
+//            $('#a_rule').focus();
+//            return false;
+//        }
+        layer_loading('正在处理');
+        $.ajax({
+            url: "{:weapp_url('Sitecollect/Sitecollect/pageset', ['_ajax'=>1])}" , //"{:url('Arctype/ajax_getTemplateList', ['_ajax'=>1])}",
+            type: 'POST',
+            dataType: 'JSON',
+            data: $('#post_form').serialize(),
+            success: function(res){
+                console.log(res);
+                if (res.code == 1) {
+                    location.href = res.data[type];
+                }else{
+                    alert(res.msg);
+                }
+            },
+            error :function () {
+                alert("操作失败，请联系管理员");
+            }
+        });
+//        $('#post_form').submit();
+    }
+    $("#get_style1").click(function(){
+        $("#urlrule_data,#min_data,#max_data").css("display","none");
+        $("#urllist_data").css("display","block");
+    });
+    $("#get_style2").click(function(){
+        $("#urllist_data").css("display","none");
+        $("#urlrule_data,#min_data,#max_data").css("display","block");
+    });
+    $("#is_list_litpic1").click(function(){
+        $("#litpic_rule_data").css("display","block");
+    });
+    $("#is_list_litpic0").click(function(){
+        $("#litpic_rule_data").css("display","none");
+    });
+//    $("#is_page1").click(function(){
+//        $("#page_a_rule_data").css("display","block");
+//        $("#page_list_rule_data").css("display","block");
+//    });
+//    $("#is_page0").click(function(){
+//        $("#page_a_rule_data").css("display","none");
+//        $("#page_list_rule_data").css("display","none");
+//    });
+    //在光标处插入内容
+    function insert_neirong(id) {
+        var html = '[内容]';
+        var textInput   = document.getElementById(id);
+        var insert      = textInput.selectionStart;
+        textInput.value = textInput.value.substr(0, insert) + html + textInput.value.substr(insert);
+    }
+</script>
+{include file="footer.htm" /}

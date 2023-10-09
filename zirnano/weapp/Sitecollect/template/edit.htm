@@ -1,0 +1,124 @@
+{include file="header.htm" /}
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="edit_bar.htm" /}
+    <form class="form-horizontal" id="post_form" action="{:weapp_url('Sitecollect/Sitecollect/edit')}" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="title"><em>*</em>任务名称</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="title" value="{$row.title}" id="title" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="typeid"><em>*</em>导入栏目</label>
+                </dt>
+                <dd class="opt">
+                    <select name="typeid" id="typeid">
+                        <option value="0">请选择栏目…</option>
+                        {$arctype_html}
+                    </select>
+                    <span class="err"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>属性设置</label>
+                </dt>
+                <dd class="opt">
+                    <input type="checkbox" name="is_desc" id="is_desc" value="1" {if condition='$row.is_desc eq 1'}checked{/if}><span for="is_desc">倒序采集</span>
+                    <input type="checkbox" name="is_filt_repet" id="is_filt_repet" value="1" {if condition='$row.is_filt_repet eq 1'}checked{/if}><span for="is_filt_repet">过滤重复标题</span>
+                    <input type="checkbox" name="is_local" id="is_local" value="1" {if condition='$row.is_local eq 1'}checked{/if}><span for="is_local">图片本地保存</span>
+                    <input type="checkbox" name="is_status" id="is_status" value="1" {if condition='$row.is_status eq 1'}checked{/if}><span for="is_status">内容存为草稿</span>
+                    <input type="checkbox" name="is_litpic" id="is_litpic" value="1" {if condition='$row.is_litpic eq 1'}checked{/if}><span for="is_litpic">提取第一张图为缩略图</span>
+
+                </dd>
+            </dl>
+            <!--<dl class="row">-->
+                <!--<dt class="tit">-->
+                    <!--<label>内容过滤</label>-->
+                <!--</dt>-->
+                <!--<dd class="opt">-->
+                    <!--<input type="checkbox" name="filt_iframe" id="filt_iframe" value="1" {if condition='$row.filt_iframe eq 1'}checked{/if}><span for="filt_iframe">Iframe</span>-->
+                    <!--<input type="checkbox" name="filt_js" id="filt_js" value="1" {if condition='$row.filt_js eq 1'}checked{/if}><span for="filt_js">Js</span>-->
+                    <!--<input type="checkbox" name="filt_a" id="filt_a" value="1" {if condition='$row.filt_a eq 1'}checked{/if}><span for="filt_a">A</span>-->
+                    <!--<input type="checkbox" name="filt_style" id="filt_style" value="1" {if condition='$row.filt_style eq 1'}checked{/if}><span for="filt_style">Style</span>-->
+                    <!--<input type="checkbox" name="filt_object" id="filt_object" value="1" {if condition='$row.filt_object eq 1'}checked{/if}><span for="filt_object">Object</span>-->
+                <!--</dd>-->
+            <!--</dl>-->
+            <dl class="row">
+                <dt class="tit">
+                    <label for="sort_order">排序</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" name="sort_order" value="{$row.sort_order}" id="sort_order" class="input-txt">
+                    <span class="err"></span>
+                    <p class="notic">越小越靠前</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>状态</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="target1" class="cb-enable {if condition='$row.status eq 1'}selected{/if}">启用</label>
+                        <label for="target0" class="cb-disable {if condition='$row.status eq 0'}selected{/if}">锁定</label>
+                        <input id="target1" name="status" value="1" type="radio" {if condition="$row.status eq 1"} checked="checked"{/if}>
+                        <input id="target0" name="status" value="0" type="radio" {if condition="$row.status eq 0"} checked="checked"{/if}>
+                    </div>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <div class="bot">
+                <input type="hidden" name="id" value="{$row.id}">
+                <a href="JavaScript:void(0);" onclick="checkForm();" class="ncap-btn-big ncap-btn-green" id="submitBtn">保存并下一步设置</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    // 判断输入框是否为空
+    function checkForm(){
+        if($('input[name=title]').val() == ''){
+            showErrorMsg('任务名称不能为空！');
+            $('input[name=title]').focus();
+            return false;
+        }
+        if($('#typeid').val() == 0){
+            showErrorMsg('请指定文章栏目！');
+            $('#typeid').focus();
+            return false;
+        }
+        var index = layer_loading('正在处理');
+        $.ajax({
+            url: "{:weapp_url('Sitecollect/Sitecollect/edit', ['_ajax'=>1])}" , //"{:url('Arctype/ajax_getTemplateList', ['_ajax'=>1])}",
+            type: 'POST',
+            dataType: 'JSON',
+            data: $('#post_form').serialize(),
+            success: function(res){
+                if (res.code == 1) {
+                    location.href = res.url;
+                }else{
+                    alert(res.msg);
+                }
+            },
+            error :function () {
+                showErrorMsg("操作失败，任务名称不宜太长");
+                layer.close(index);
+            }
+        });
+
+//        $('#post_form').submit();
+    }
+</script>
+{include file="footer.htm" /}

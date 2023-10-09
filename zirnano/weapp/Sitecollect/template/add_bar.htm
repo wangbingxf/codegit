@@ -1,0 +1,44 @@
+
+<div class="fixed-bar">
+    <div class="item-title">
+        <a class="back"  href="{:weapp_url("Sitecollect/Sitecollect/index")}"  title="返回列表">
+        <i class="fa fa-arrow-circle-o-left"></i>
+        </a>
+        <div class="subject">
+            <h3>{$weappInfo['name']}</h3>
+            <h5></h5>
+        </div>
+        <ul class="tab-base nc-row">
+            <li>
+                {eq name="$Request.param.sa" value="add"}
+                <a href="javascript:void(0);" class="tab current"><span>基本设置</span></a>
+                {else /}
+                <a href="javascript:void(0);" class="tab"><span>基本设置</span></a>
+                {/eq}
+            </li>
+
+            <li>
+                {range name="$Request.param.sa" value="pageset" type='in'}
+                <a href="javascript:void(0);" class="tab current"><span>网站采集</span></a>
+                {else /}
+
+                <a href="javascript:;" class="tab"><span>网站采集</span></a>
+                {/range}
+            </li>
+            <li>
+                {range name="$Request.param.sa" value="contentset" type='in'}
+                <a href="javascript:void(0);" class="tab current"><span>内容采集</span></a>
+                {else /}
+                <a href="javascript:;" class="tab"><span>内容采集</span></a>
+                {/range}
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    function closemysef() {
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
+    }
+
+</script>

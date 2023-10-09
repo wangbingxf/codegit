@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="applicable-device" content="pc,mobile" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name='viewport' content='width=1440' />
+<title>{eyou:global name='web_title' /}</title>
+<meta name="keywords" content="{eyou:global name='web_keywords' /}" />
+<meta name="description" content="{eyou:global name='web_description' /}" />
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/all.css" rel="stylesheet" type="text/css" />
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/r.css" rel="stylesheet" type="text/css" />
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/home.css" rel="stylesheet" type="text/css" />
+<meta name='viewport' content='width=1440' />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<script type="text/javascript">
+    window.siteIsPc=true;
+    window.foreignList= [];
+    window.tenant = {"cdnFlag":"2","createTime":null,"domain":"","domainInfo":null,"foreign":true,"id":220339,"language":"zh_CN","mobileDomain":"","mobileStatus":8,"status":6,"templateCode":"global_site_standard","tenantCode":"100001_2011275283","unittype":"100001","verify":"dc5208d213d5fc676cd5f21085b296fa","mverify":"da20d96bfa310ebf5bcb4a0194e4e793"};
+    window.upgradeVersion="b142bf0401dd43ce7abb2bea2b370c8b";
+    var isxinnet = "false";
+    window.noredirectCookieName = "_noredirect";
+    var visittrack_siteId = "100001_2011275283";
+    var visittrack_url = "";
+    var gatherScripts = "";
+    var unittype=window.tenant.unittype ;
+    window.globalObj={};
+    window.globalObj.isOpenSSL = true;
+</script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/all.js"></script>
+<link type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/swiper.min.css" rel="stylesheet" />
+<link type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/ys.css" rel="stylesheet"/>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/swiper.min.js"></script>
+<!--[if lt IE 9]> 
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/html5shiv.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/respond.js"></script>
+<![endif]-->
+</head>
+<body data-pageid="be790d2c-ff86-440e-bb2d-7ef5694552b8" data-layout="flow">
+	<div class="main pagebox"><div id="w_grid-1577071265817" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">        
+	<div id="content_box-1577071265817-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_grid-1577081423563" class="w_grid-000"><div class="w_grid signal">  
+	<div class="e_box e_box-000 p_gridbox">         
+	<div id="content_box-1577081423563-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="c_portalResnav_main-15997884350933345" class="c_portalResnav_main-01001014"> 
+{eyou:include file="header.htm" /}	
+</div></div>       </div>  </div></div>
+
+<div id="w_grid-1599796264864" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1599796264864-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="c_portalResEbizads_banner-15998094117454302" class="c_portalResEbizads_banner-01001018"> 
+	<div class="banner f-center">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			{eyou:adv pid='1'}
+			<div class="swiper-slide">
+				<div class="pcimg">
+				 <img class="bannerPic" src="{$field.litpic}" alt="{$field.title}">
+				</div>
+				<div class="moimg">
+				 <img class="bannerPic" src="{$field.litpic}" alt="{$field.title}">
+				</div>
+				<div class="ind_ban_tex">
+				<div class="ind_ban_tex_title_en">{eyou:global name='web_attr_3' /}</div>
+				<div class="b_line"></div>
+				<div class="ind_ban_con">    
+					  <div class="ind_ban_tex_title"><h1 class="t_big">{$field.title}</h1></div>
+					  <div class="ind_ban_tex_info"><p class="t_small">{$field.intro}</p></div>
+				</div>
+				</div>
+			</div>
+			{/eyou:adv}
+		</div>
+		<!-- 如果需要分页器 -->
+		<div class="swiper-pagination"></div>
+		<!-- 如果需要导航按钮 -->
+		<div class="swiper-button-prev"><i class="iconfont f-22">&#xe6a8;</i></div>
+		<div class="swiper-button-next"><i class="iconfont f-22">&#xe6a7;</i></div>
+	</div>
+</div>
+<script>
+var banSwiper = new Swiper('.banner .swiper-container', {
+ effect: 'fade',
+ slideActiveClass: 'active',
+ autoplay: {
+		 delay: 5000,
+		 stopOnLastSlide: false,
+		 disableOnInteraction: false,
+ },
+ speed: 1000,
+ pagination: {
+		 el: '.banner .swiper-pagination',
+		 clickable: true,
+		 renderBullet: function (index, className) {
+				 return '<span class="' + className + '"> <div class="wrapper_con right">\n' +
+						 '            <div class="circleProgress rightcircle"></div>\n' +
+						 '        </div>\n' +
+						 '        <div class="wrapper_con left">\n' +
+						 '            <div class="circleProgress leftcircle"></div>\n' +
+						 '        </div><div class="f-14">' + '0' + (index + 1) + '</div></span>';
+		 },
+ },
+ navigation: {
+		 nextEl: '.banner .swiper-button-next',
+		 prevEl: '.banner .swiper-button-prev',
+ }
+});
+</script>
+<script>$("div[id^='c_']").attr("loaded","true")</script>
+<input class="requsetParam"  type="hidden" value=""/>
+</div></div>       </div>  </div></div>
+
+<div id="w_grid-1599786937890" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1599786937890-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_grid-1599787378164" class="w_grid-001"><div class="w_grid ">   <div class="e_box e_box-000 p_gridbox">        
+
+{eyou:modelsartlist typeid='2' type='son' row='5'} 
+<div id="content_box-1599787378164-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_grid-1599787378174" class="w_grid-001"><div class="w_grid ">   <div class="e_box e_box-000 p_gridbox">    <div id="content_box-1599787378174-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_fimg-1599787378188" class="w_fimg-000"><div class="w_img animated  ">  <div class="e_box e_box-000 p_box">   <a href="{eyou:field name='typeurl' /}" class="e_link e_link-000 p_link001" target="_self">            <div class="e_image e_DImage-001 p_dimage">            <img src="{eyou:global name='web_templets_pc' /}/skin/images/ic{$i}.png" alt="{eyou:field name='typename' /}" width="100%" height="100%" />           </div>             </a>           </div> </div></div></div>
+	<div id="content_box-1599787378174-1" class="e_box e_box-000 d_gridCell_1 p_gridCell"><div id="w_common_text-1599787378197" class="reset_style"><div><p style="text-align:center"><a href="{eyou:field name='typeurl' /}"><span style="color:#FFFFFF"><strong><span style="font-size:20px">{eyou:field name='typename' /}</span></strong></span></a></p>
+	</div></div><div id="w_common_text-1599787378201" class="reset_style"><div><p style="text-align:center"><a href="/news/8/"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><span style="line-height:1.6"><span style="color:#FFFFFF">{eyou:field name='englist_name' /} </span></span></span></span></a></p>
+	</div></div></div>    
+</div>  </div></div></div>        
+{/eyou:modelsartlist}
+</div>  </div></div></div>       </div>  </div></div>
+ {eyou:modelsartlist typeid='1'} 
+<div id="w_grid-1598506988431" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1598506988431-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_grid-1598507448418" class="w_grid-001"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1598507448418-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_common_text-1598507448434" class="reset_style"><div><h1 style="text-align:center"><span style="color:#16479e"><span style="font-size:36px">{eyou:field name='typename' /}</span></span></h1>
+</div></div><div id="w_fline-1598507448440" class="w_fline-001"><div class="w_fline">  <div class="e_line e_Hline-001 p_FLine"></div> </div></div><div id="w_common_text-1598507448448" class="reset_style"><div><p style="text-align:center"><span style="letter-spacing:0px"><span style="font-size:18px">{eyou:field name='englist_name' /}</span></span></p>
+</div></div><div id="w_grid-1601294582117" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1601294582117-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="c_portalResProduct_category-16012945806490263" class="c_portalResProduct_category-01001"> 
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/rbqbhv0t2rcebalnaaaaabwsxic584.css">
+<div class="proCateDemo">
+    <div class="swiper-container wyz-cate-container c_portalResProduct_category-16012945806490263_swiper">
+        <div class="swiper-wrapper">
+            {eyou:models type="son" loop="60" id="field"}
+			<div class="p_articlesC swiper-slide">
+                <!-- 标题 -->
+                <a href="{$field.typeurl}" class="p_infoA title">{$field.typename}</a>
+            </div>
+			{/eyou:models}
+        </div>
+    </div>
+    <!-- 切换按钮 -->
+    <div class="swiper-button btn-prev c_portalResProduct_category-16012945806490263_prev ">
+        <i class="iconfont">&#xe6b0;</i>
+    </div>
+    <div class="swiper-button btn-next c_portalResProduct_category-16012945806490263_next">
+        <i class="iconfont">&#xe6af;</i>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        // 获取组件实例
+        var id = "portalResProduct_category-16012945806490263"  // 组件ID
+        var scp = $compCl.getScope(id)  // 组件实例
+        var pathname = window.location.pathname;
+        // swiper4.0
+        require(["swiper4.4.2"], function (med) {
+            var wyzCate = new Swiper('.c_portalResProduct_category-16012945806490263_swiper', {
+                preventClicks: false,//默认true
+                // 切换速度
+                speed: 300,
+                // 显示个数
+                slidesPerView: 2,
+                // 间距
+                spaceBetween: 10,
+                // 响应式
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        slidesPerColumn: 2,
+                        slidesPerGroup: 2,
+                        spaceBetween: 5,
+                    }
+                },
+                // 点击切换到这个slide
+                slideToClickedSlide: true,
+                // 前进后退按钮
+                navigation: {
+                    nextEl: '.c_portalResProduct_category-16012945806490263_next ',
+                    prevEl: '.c_portalResProduct_category-16012945806490263_prev  ',
+                    disabledClass: 'button-disabled',
+                },
+                on: {
+                    init: function () {
+                        scp.find('.title').eq(0).addClass('active').siblings().removeClass('active');
+                        scp.find('.title').each(function (i, v) {
+                            if ($(v).attr('href') == pathname) {
+                                $(v).parent().addClass('active').siblings().removeClass('active');
+                            }
+                        });
+                    },
+                    click: function (event) {
+                        var index = wyzCate['clickedIndex'];
+                        scp.find('.swiper-slide').eq(index).addClass('active').siblings().removeClass('active');
+                    },
+                },
+            });
+            // 轮播图移动
+            scp.find('.title').each(function (i, v) {
+                if ($(v).attr('href') == pathname) {
+                    wyzCate.slideTo(i, 0)
+                }
+            });
+        })
+    });
+    $("div[id^='c_portalResProduct_category']").attr("loaded", "true");
+</script>
+</div></div>       </div>  </div></div></div>       </div>  </div></div><div id="c_portalResProduct_list-15985074033263728" class="c_portalResProduct_list-01001001"> 
+<input type="hidden" class="listAddUrl" value="&gototype=add&productType=0&backType=picview&proshowcaseId=&proparentId=&appId=">
+<input type="hidden" class="listModifyUrl" value="&proparentId=&appId="> 
+ <!-- 内容部分开始 -->
+    <div class="wrap1" id="products">
+        <div class="list">
+            <!-- Swiper开始 -->
+            <div class="swiper-container swiper-container-pro">
+                <ul class="swiper-wrapper swiper-wrapperUl">
+                    {eyou:arclist row='10' titlelen='25'}									
+					<li class="productLi swiper-slide">
+                        <a href="{$field.arcurl}" class="block relative aTop">
+                            <div class="absolute picture">
+								<img src="{$field.litpic}" title='{$field.title}' class='proPic' alt='{$field.title}' />
+	                        </div>
+                            <div class="blue absolute trans5">
+                                <div class="number relative">{$field.title}</div>
+                                <div class="desc1">{$field.seo_description|html_msubstr=###,0,50,true}</div>
+                            </div>
+                        </a>
+                        <div class="text-center">
+                            <a href="{$field.arcurl}" class="proName2">{$field.title}</a>                         
+                        </div>
+                    </li>
+					{/eyou:arclist}
+                </ul>
+            </div>
+           <!-- Swiper结束 -->
+           <!-- 按钮开始 -->
+            <div class="swiper-button-prev">
+          			<i class="iconfont">&#xe687;</i>
+          	</div>
+            <div class="swiper-button-next">
+          			<i class="iconfont">&#xe6ae;</i>
+          	 </div>
+           <!-- 按钮结束 -->
+        </div>
+    </div>
+    <!-- 内容部分结束 -->
+ <script>
+      $(document).ready(function () {
+          require(['swiper'], function (s) {
+              var swiper = new Swiper('.swiper-container-pro', {
+                  slidesPerView:2,
+                  paginationClickable: false,
+                  spaceBetween: 30,
+                  loop: true,
+                  autoplay: 2500,
+                  speed: 1000,
+                  //autoplay: 2500,
+                  nextButton: '#products .swiper-button-next',
+                  prevButton: '#products .swiper-button-prev',
+                  breakpoints: {
+                      //当宽度小于等于480
+                      480: {
+                          slidesPerView: 1,
+                          spaceBetween:10
+                      },
+                      //当宽度小于等于980
+                      980: {
+                          slidesPerView: 2,
+                          spaceBetween: 20
+                      },
+                       //当宽度小于等于1200
+                      1200: {
+                          slidesPerView: 2,
+                          spaceBetween:20
+                      }
+                  },
+              });
+          })
+      })
+  </script>
+
+</div>
+
+<div id="w_fbtn-1598513650815" class="w_fbtn-001"><div class="w_fbtn animated  ">  <a href="{eyou:field name='typeurl' /}" class="e_link e_link-001 p_link" target="_self" title="MORE +">   <div class="e_btn e_CommonBtn-001 p_CommonBtn">    <div class="font">MORE +</div>   </div>  </a> </div></div></div>       </div>  </div></div>
+{/eyou:modelsartlist} 
+
+<div id="c_portalResPublic_codeContainer-15998111119305244" class="c_portalResPublic_codeContainer-01001" data-vhide768="true"> 
+<div class="e_box"></div>
+<div class="m2_wrapper">
+  <ul class="sfq hidden-xs">
+    {eyou:arclist row='6' titlelen='25' addfields='content' orderby='aid' orderway='asc' typeid='57'}									
+	<li class="{eyou:eq name='$i' value='1'}on{/eyou:eq}">
+      <img src="{$field.litpic}" alt="{$field.title}" style="width:900px;">
+      <div class="txt">
+        <div class="txt_wrapper">
+          <a href="/">
+            <h3></h3>
+            <h2>{$field.title}</h2>
+			{$field.content}
+          </a>
+        </div>
+        <div class="jj1"><img src="{eyou:global name='web_templets_pc' /}/skin/images/ss{$i}.png" alt="{$field.title}"></div>
+      </div>
+      <div class="title">
+        <div class="jj2"><img src="{eyou:global name='web_templets_pc' /}/skin/images/ss{$i}.png" alt="{$field.title}"></div>
+        <p>{$field.subtitle}</p>
+        <span></span>
+      </div>
+    </li>
+	{/eyou:arclist}
+  </ul>
+</div>
+<script>
+$(".m2_wrapper li").hover(function () {
+  $(this).addClass("on").siblings().removeClass("on");
+})
+</script></div><div id="w_grid-1599811056106" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1599811056106-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"></div>       </div>  </div></div>
+ {eyou:modelsartlist typeid='3'} 
+<div id="w_grid-1598511335039" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1598511335039-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_grid-1598514667452" class="w_grid-001"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1598514667452-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_common_text-1598514667470" class="reset_style"><div><h1 style="text-align:center"><span style="color:#16479e"><span style="font-size:36px">{eyou:field name='typename' /}</span></span></h1>
+</div></div><div id="w_fline-1598514667477" class="w_fline-001"><div class="w_fline">  <div class="e_line e_Hline-001 p_FLine"></div> </div></div><div id="w_common_text-1598514667487" class="reset_style"><div data-url="#"><p style="text-align:center"><span style="letter-spacing:0px"><span style="font-size:18px">{eyou:field name='englist_name' /}</span></span></p>
+</div></div></div>       </div>  </div></div><div id="w_fimg-1598516032705" class="w_fimg-000"><div class="w_img animated  ">  <div class="e_box e_box-000 p_box"> 
+<div class="e_image e_DImage-001 p_dimage">        
+{eyou:type addtable='single_content'}{$field.content}{/eyou:type}
+</div>                        </div> </div></div></div>       </div>  </div></div>
+{/eyou:modelsartlist} 
+{eyou:modelsartlist typeid='7'} 
+<div id="w_grid-1599920205589" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1599920205589-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_grid-1599920205612" class="w_grid-001"><div class="w_grid ">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1599920205612-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_fimg-1599920205622" class="w_fimg-000" data-animation="once"><div class="w_img animated  ">  <div class="e_box e_box-000 p_box">   
+	<a class="e_link e_link-000 p_link001" target="_self" disabled="disabled" href="{eyou:field name='typeurl' /}">            <div class="e_image e_DImage-001 p_dimage">            <img src="{eyou:type addfields='sytp'}{$field.sytp}{/eyou:type}" alt="{eyou:field name='typename' /}" title="{eyou:field name='typename' /}" width="100%" height="100%" />           </div>             </a>     
+</div> </div></div></div>         
+
+<div id="content_box-1599920205612-1" class="e_box e_box-000 d_gridCell_1 p_gridCell"><div id="w_grid-1599920205630" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1599920205630-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="w_common_text-1599920205638" class="reset_style" data-vhide414="true"><div><p><span style="color:#16479e"><span style="font-size:60px"><strong>{eyou:field name='englist_name' /}</strong></span></span></p>
+</div></div><div id="w_common_text-1599920205643" class="reset_style"><div><p><span style="font-size:30px"><strong>{eyou:field name='typename' /}</strong></span></p>
+</div></div><div id="w_fline-1599920205648" class="w_fline-001" data-animation="once"><div class="w_fline">  <div class="e_line e_Hline-001 p_FLine"></div> </div></div><div id="w_common_text-1599920205653" class="reset_style"><div>
+<p>{eyou:type  addfields='synr'}{$field.synr}{/eyou:type}</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div><div id="w_grid-1599920205658" class="w_grid-000"><div class="w_grid signal">   <div class="e_box e_box-000 p_gridbox">         <div id="content_box-1599920205658-0" class="e_box e_box-000 d_gridCell_0 p_gridCell"><div id="c_portalResPublic_codeContainer-15999202053336859" class="c_portalResPublic_codeContainer-01001"> 
+<div class="e_box"></div>
+
+
+<div class="about-num">
+	<ul class="f-cb">
+		{eyou:type addfields='canshu'}   {$field.canshu|htmlspecialchars_decode=###}{/eyou:type}
+	</ul>
+</div>
+
+</div><div id="w_fbtn-1600077666738" class="w_fbtn-001"><div class="w_fbtn animated  ">  <a href="{eyou:field name='typeurl' /}" class="e_link e_link-001 p_link" target="_self" title="MORE +">   <div class="e_btn e_CommonBtn-001 p_CommonBtn">    <div class="font">MORE +</div>   </div>  </a> </div></div></div>       </div>  </div></div></div>       </div>  </div></div></div>       </div>  </div></div></div>       </div>  </div></div></div>       </div>  </div></div>
+{/eyou:modelsartlist}
+{eyou:include file="footer.htm" /}
+</body>
+</html>

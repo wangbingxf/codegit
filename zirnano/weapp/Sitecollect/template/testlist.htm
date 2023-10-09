@@ -1,0 +1,47 @@
+{include file="header.htm" /}
+{load href="__PUBLIC__/plugins/Ueditor/ueditor.config.js" /}
+{load href="__PUBLIC__/plugins/Ueditor/ueditor.all.min.js" /}
+{load href="__PUBLIC__/plugins/Ueditor/lang/zh-cn/zh-cn.js" /}
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="edit_bar.htm" /}
+    <div class="ncap-form-default">
+
+        {volist name="url_list" id="vo"}
+        <dl class="row">
+            <dt class="tit">
+                <label >采集网页</label>
+            </dt>
+            <dd class="opt">
+                <span>{$vo.url}</span>
+            </dd>
+        </dl>
+        {notempty name="$vo.litpic"}
+        <dl class="row">
+            <dt class="tit">
+                <label >缩略图</label>
+            </dt>
+            <dd class="opt">
+                <span><img src="{$vo.litpic}"></span>
+            </dd>
+        </dl>
+        {/notempty}
+
+        {/volist}
+        <div class="bot">
+            <a href="{:weapp_url('Sitecollect/Sitecollect/pageset',['id'=>$row.id])}"  class="ncap-btn-big ncap-btn-green">返回上一步进行修改</a>
+            <a href="{:weapp_url('Sitecollect/Sitecollect/contentset',['id'=>$row.id])}"  class="ncap-btn-big ncap-btn-green">保存信息并进入下一步设置</a>
+        </div>
+    </div>
+</div>
+<script>
+    //分批次分页面采集单个任务
+    function channelfun(obj) {
+        var url = $(obj).attr('data-url')+"&id="+$(obj).attr('data-id');
+        var index = layer.open({type: 2,title: '开始生成',area: ['500px', '300px'],fix: false, maxmin: false,content: url});
+    }
+</script>
+{include file="footer.htm" /}

@@ -1,0 +1,454 @@
+{include file="header.htm" /}
+<style>
+    .am-table-radius{border:1px solid #ddd;border-radius:2px}.am-table-radius>thead>tr:first-child>td:first-child,.am-table-radius>thead>tr:first-child>th:first-child{border-top-left-radius:2px;border-left:none}.am-table-radius>thead>tr:first-child>td:last-child,.am-table-radius>thead>tr:first-child>th:last-child{border-top-right-radius:2px;border-right:none}.am-table-radius>tbody>tr>td:first-child,.am-table-radius>tbody>tr>th:first-child{border-left:none}.am-table-radius>tbody>tr>td:last-child,.am-table-radius>tbody>tr>th:last-child{border-right:none}.am-table-radius>tbody>tr:last-child>td,.am-table-radius>tbody>tr:last-child>th{border-bottom:none}.am-table-radius>tbody>tr:last-child>td:first-child,.am-table-radius>tbody>tr:last-child>th:first-child{border-bottom-left-radius:2px}.am-table-radius>tbody>tr:last-child>td:last-child,.am-table-radius>tbody>tr:last-child>th:last-child{border-bottom-right-radius:2px}
+    .am-margin-top{margin-top:10px; width: 592px;}
+    .am-table-striped>tbody>tr:nth-child(odd)>th {
+        background-color: #f9f9f9;
+    }
+    .am-table>tbody>tr>td, .am-table>tbody>tr>th, .am-table>tfoot>tr>td, .am-table>tfoot>tr>th, .am-table>thead>tr>td, .am-table>thead>tr>th{
+        padding: .7rem;
+        line-height: 1.6;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+    }
+</style>
+
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="edit_bar.htm" /}
+    <form class="form-horizontal" id="post_form" action="{:weapp_url('Sitecollect/Sitecollect/contentset')}" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>标题匹配规则</label>
+                </dt>
+                <dd class="opt">
+                    <input type="hidden"  name="name[]" value="{$oringin_channel_type_list[0]['name']}" >
+                    <textarea rows="5" cols="80" id="title" name="rule[]" style="height:80px;">{$oringin_channel_type_list[0]['rule']}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">通配标识为需要采集的标题</p>
+                    <p><a href="javascript:;" onclick="insert_neirong('title')">>>插入通配标识"[内容]"</a></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label><em>*</em>文章内容规则</label>
+                </dt>
+                <dd class="opt">
+                    <input type="hidden"  name="name[]" value="{$oringin_channel_type_list[1]['name']}" >
+                    <textarea rows="5" cols="80" id="content" name="rule[]" style="height:80px;">{$oringin_channel_type_list[1]['rule']}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">通配标识为需要采集的文章内容</p>
+                    <p><a href="javascript:;" onclick="insert_neirong('content')">>>插入通配标识"[内容]"</a></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>内容过滤</label>
+                </dt>
+                <dd class="opt">
+                    <input type="checkbox" name="filt_iframe" id="filt_iframe" value="1" {if condition='$row.filt_iframe eq 1'}checked{/if}><span for="filt_iframe">Iframe</span>
+                    <input type="checkbox" name="filt_js" id="filt_js" value="1" {if condition='$row.filt_js eq 1'}checked{/if}><span for="filt_js">Js</span>
+                    <input type="checkbox" name="filt_a" id="filt_a" value="1" {if condition='$row.filt_a eq 1'}checked{/if}><span for="filt_a">A</span>
+                    <input type="checkbox" name="filt_style" id="filt_style" value="1" {if condition='$row.filt_style eq 1'}checked{/if}><span for="filt_style">Style</span>
+                    <input type="checkbox" name="filt_object" id="filt_object" value="1" {if condition='$row.filt_object eq 1'}checked{/if}><span for="filt_object">Object</span>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>文章分页</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="is_page1" class="cb-enable {if condition='$row.is_page eq 1'}selected{/if}">是</label>
+                        <label for="is_page0" class="cb-disable {if condition='$row.is_page eq 0'}selected{/if}">否</label>
+                        <input id="is_page1" name="is_page" value="1" type="radio" {if condition="$row.is_page eq 1"} checked="checked"{/if}>
+                        <input id="is_page0" name="is_page" value="0" type="radio" {if condition="$row.is_page eq 0"} checked="checked"{/if}>
+                    </div>
+                    <span class="err"></span>
+                    <p class="notic">被采集的文章，是否存在单篇文章分页</p>
+                </dd>
+            </dl>
+            <dl class="row"  id="page_a_rule_data" {if condition="$row.is_page eq 0"} style="display: none"{/if}>
+                <dt class="tit">
+                    <label>页面正则代码</label>
+                </dt>
+                <dd class="opt">
+                    <textarea rows="5" cols="80" id="page_a_rule" name="page_a_rule"  placeholder="如：http://www.yourweb.com/new/{{id}}.html"  style="height:80px;">{$row.page_a_rule}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">{{id}}表示页面id</p>
+                </dd>
+            </dl>
+            <dl class="row"  id="page_list_rule_data" {if condition="$row.is_page eq 0"} style="display: none"{/if}>
+                <dt class="tit">
+                    <label>分页正则代码</label>
+                </dt>
+                <dd class="opt">
+                    <textarea rows="5" cols="80" id="page_list_rule" name="page_list_rule" placeholder="如：http://www.yourweb.com/new/{{id}}_{{page}}.html" style="height:80px;">{$row.page_list_rule}</textarea>
+                    <span class="err"></span>
+                    <p class="notic">{{id}}表示页面id，{{page}}表示分页页码</p>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>其他字段</label>
+                </dt>
+                <dd class="opt">
+                    <a href="javascript:;" onclick="insert_caiji()" class="ncap-btn ncap-btn-green">添加采集规则</a>
+                    <table class="am-table am-table-bordered am-table-radius am-table-striped am-margin-top">
+                        <tbody><tr>
+                            <th width="100">字段名称</th>
+                            <th>采集规则</th>
+                            <th width="100">操作</th>
+                        </tr>
+                        </tbody>
+                        <tbody id="caiji_list">
+                        {volist name="channel_type_list" id="vo"}
+                        {notempty name="$vo.rule"}
+                        <tr id="tr_{$vo.name}">
+                            <td>
+                                <select class="caiji" name="name[]" onmousedown="get_old_select(this)" onchange="select_caiji(this)">
+                                    {volist name="channel_type_list" id="v2"}
+                                    <option value="{$v2.name}" {eq name="$v2.name" value="$vo.name"}selected="true"{/eq}>{$v2.title}</option>
+                                    {/volist}
+                                </select>
+                            </td>
+                            <td><textarea rows="3" id="{$vo.name}" name="rule[]" style="width:100%; height: 60px;">{$vo.rule}</textarea></td>
+                            <td>
+                                <a href="javascript:;" id="del_{$vo.name}"  onclick="del_neirong('{$vo.name}')" class="del"><span class="fa fa-close"></span> 删除</a>
+                                <br>
+                                <p><a href="javascript:;" id="insert_{$vo.name}" onclick="insert_neirong('{$vo.name}')"><span class="fa fa-plus"></span> 插入"[内容]"</a></p>
+                            </td>
+                        </tr>
+                        {/notempty}
+                        {/volist}
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>字符替换</label>
+                </dt>
+                <dd class="opt">
+                    <a href="javascript:;" onclick="insert_tihuan()" class="ncap-btn ncap-btn-green">添加替换规则</a>
+
+                    <table class="am-table am-table-bordered am-table-radius am-table-striped am-margin-top">
+                        <tbody><tr>
+                            <th width="50">类型</th>
+                            <th>需要替换的字符</th>
+                            <th>替换为</th>
+                            <th width="50">操作</th>
+                        </tr>
+                        </tbody>
+                        <tbody id="replace_list">
+                        {volist name="oringin_channel_type_list" id="vo"}
+                        {notempty name="$vo.origin"}
+                        <tr id="replace_tr_{$vo.name}">
+                            <td>
+                                <select class="replace" name="replace_name[]" onmousedown="get_replace_old_select(this)" onchange="select_replace(this)">
+                                    {volist name="oringin_channel_type_list" id="v2"}
+                                    <option value="{$v2.name}" {eq name="$v2.name" value="$vo.name"}selected="true"{/eq}>{$v2.title}</option>
+                                    {/volist}
+                                </select>
+                            </td>
+                            <td>
+                                <textarea id="origin_{$vo.name}" name="origin[]" rows="3" style="width:100%; height: 60px;">{$vo.origin}</textarea>
+                            </td>
+                            <td>
+                                <textarea  id="replace_{$vo.name}" name="replace[]" rows="3" style="width:100%; height: 60px;">{$vo.replace}</textarea>
+                            </td>
+                            <td>
+                                <a href="javascript:;" id="replace_del_{$vo.name}"  onclick="replace_del_neirong('{$vo.name}')" class="del">
+                                    <span class="fa fa-close"></span> 删除
+                                </a>
+                            </td>
+                        </tr>
+                        {/notempty}
+                        {/volist}
+                        </tbody>
+                    </table>
+                </dd>
+            </dl>
+
+            <div class="bot">
+                <input type="hidden" name="id" value="{$row.id}">
+                <input type="hidden" name="typeid" value="{$row.typeid}">
+                <a href="JavaScript:void(0);" onclick="checkForm(0);" class="ncap-btn-big ncap-btn-green">仅保存</a>
+                <a href="JavaScript:void(0);" onclick="checkForm(1);" class="ncap-btn-big ncap-btn-green" id="submitBtn">保存数据并测试</a>
+                <!--<a href="JavaScript:void(0);" onclick="checkForm();" class="ncap-btn-big ncap-btn-green" id="submitBtn">完成</a>-->
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    var channel_type_list = {$channel_type_list|json_encode};   //采集规则使用
+    var origin_channel_type_list = {$channel_type_list|json_encode};  //原始数据
+
+    var replace_channel_type_list = {$oringin_channel_type_list|json_encode};  //替换规则使用
+    var replace_origin_channel_type_list = {$oringin_channel_type_list|json_encode};  //替换规则使用
+    var old_select = "";  //规则字段改变之前的select选中的值
+    var old_select_list = []; //规则字段改变之前的select选中的数组
+    var replace_old_select = "";  //替换字段改变之前的select选中的值
+    var replace_old_select_list = []; //替换字段改变之前的select选中的数组
+
+    get_type_list();
+    replace_get_type_list();
+    //在光标处插入内容
+    function insert_neirong(id) {
+        var html = '[内容]';
+        var textInput   = document.getElementById(id);
+        var insert      = textInput.selectionStart;
+        textInput.value = textInput.value.substr(0, insert) + html + textInput.value.substr(insert);
+    }
+    //显示分页配置信息
+    $("#is_page1").click(function(){
+        $("#page_a_rule_data").css("display","block");
+        $("#page_list_rule_data").css("display","block");
+    });
+    $("#is_page0").click(function(){
+        $("#page_a_rule_data").css("display","none");
+        $("#page_list_rule_data").css("display","none");
+    });
+    //添加采集内容块
+    function insert_caiji() {
+        var select_html = text_id = ruleid = selected_html = '';
+        if (channel_type_list.length < 1){
+            alert("已经没有更多参数");
+            return false;
+        }
+        $.each(channel_type_list,function(index,value){
+            if (index == 0){
+                text_id = value['name'];
+                selected_html = 'selected="true"';
+            }else{
+                selected_html = '';
+            }
+            select_html += '<option value="'+value['name']+ '" '+selected_html+'>'+value['title']+'</option>';
+
+        });
+        var html =  '<tr id="tr_'+ text_id +'">' +
+            '<td>' +
+            '   <select  class="caiji" name="name[]" onmousedown="get_old_select(this)" onchange="select_caiji(this)">' +
+            select_html +
+            '   </select>' +
+            '</td>' +
+            '<td><textarea rows="3" id="'+ text_id +'" name="rule[]" style="width:100%; height: 60px;"></textarea></td>' +
+            '<td>' +
+            '   <a href="javascript:;" id="del_'+ text_id +'" onclick="del_neirong(\''+ text_id +'\')" class="del"><span class="fa fa-close"></span> 删除</a>' +
+            '   <p><a href="javascript:;" id="insert_'+ text_id +'" onclick="insert_neirong(\''+ text_id +'\')"><span class="fa fa-plus"></span>插入"[内容]"</a></p>' +
+            '</td>' +
+            '</tr>';
+        $("#caiji_list").append(html);
+        get_type_list();
+
+    }
+
+    //获取剩余的可以设置的值
+    function get_type_list() {
+        var arr = [];
+        channel_type_list = JSON.parse(JSON.stringify(origin_channel_type_list));
+        $.each(channel_type_list,function(index,value){
+            if ($("#"+value['name']).length>0){
+                arr.unshift(index);
+            }
+        });
+        for(var i=0;i<arr.length;i++){
+            channel_type_list.splice(arr[i],1);
+        }
+        set_old_select();
+    }
+	//重新设置已经存在的select
+	function set_old_select(){
+        var channel_type_list_value = [];
+        var channel_type_list_title = [];
+        $.each(channel_type_list,function(index,value){
+            channel_type_list_value.push(value.name);
+            channel_type_list_title.push(value.title);
+        });
+		$.each($(".caiji"),function(index,value){
+            var selectValue = $(value).val();
+            var option_list = [];
+            $.each($(value).find("option"),function (index1,value1) {
+		        if ($.inArray($(value1).val(), channel_type_list_value) == -1 && $(value1).attr('value') != selectValue){   //不存在数组且不为true,则删除该选项
+                    $(value1).remove();
+                }else{
+                    option_list.push($(value1).attr('value'));
+                }
+            });
+            //如果存在value数组，而不存在option，则加入option
+            for(var i=0;i<channel_type_list_value.length;i++){
+                if ($.inArray(channel_type_list_value[i], option_list) == -1){
+                    $(value).append("<option value='"+channel_type_list_value[i]+"'>"+channel_type_list_title[i]+"</option>");
+                }
+            }
+        });
+	}
+    //获取改变之前的select选中的值 (如何判断这货是走了一次还是两次)第一次是旧的，第二次是新的
+    function get_old_select(obj) {
+        old_select_list.push($(obj).val());
+    }
+    //重新选中采集字段
+    function select_caiji(obj) {
+        new_select = $(obj).val();
+        old_select = old_select_list[old_select_list.length-1];
+        if (old_select === new_select){
+            old_select = old_select_list[old_select_list.length-2];
+        }
+        $('#tr_'+old_select).attr('id','tr_'+new_select);
+        $('#'+old_select).attr('id',new_select);
+        $('#insert_'+old_select).attr('id','insert_'+new_select);
+        $('#insert_'+new_select).attr('onclick',"insert_neirong('"+new_select+"')");
+        old_select_list.length = 0;
+        old_select = '';   //记得清空一下，为下次做好准备
+        get_type_list();
+    }
+    //删除采集代码块
+    function del_neirong(id) {
+        $("#tr_"+id).remove();
+        get_type_list();
+    }
+
+    //添加替换内容块
+    function insert_tihuan() {
+        var select_html = text_id = ruleid = selected_html = '';
+        if (replace_channel_type_list.length < 1){
+            alert("已经没有更多参数");
+            return false;
+        }
+        $.each(replace_channel_type_list,function(index,value){
+            if (index == 0){
+                text_id = value['name'];
+                selected_html = 'selected="true"';
+            }else{
+                selected_html = '';
+            }
+            select_html += '<option value="'+value['name']+ '" '+selected_html+'>'+value['title']+'</option>';
+
+        });
+        var html =  '<tr id="replace_tr_'+ text_id +'">' +
+            '<td>' +
+            '   <select  class="replace" name="replace_name[]" onmousedown="get_replace_old_select(this)" onchange="select_replace(this)">' +
+            select_html +
+            '   </select>' +
+            '</td>' +
+            '<td><textarea rows="3" id="origin_'+ text_id +'" name="origin[]" style="width:100%; height: 60px;"></textarea></td>' +
+            '<td><textarea rows="3" id="replace_'+ text_id +'" name="replace[]" style="width:100%; height: 60px;"></textarea></td>' +
+            '<td>' +
+            '   <a href="javascript:;" id="replace_del_'+ text_id +'" onclick="replace_del_neirong(\''+ text_id +'\')" class="del">' +
+            '   <span class="fa fa-close"></span> 删除</a>' +
+            '</td>' +
+            '</tr>';
+        $("#replace_list").append(html);
+        replace_get_type_list();
+    }
+    //获取改变之前的select选中的值
+    function get_replace_old_select(obj) {
+        replace_old_select_list.push($(obj).val());
+    }
+    //重新选中替换字段
+    function select_replace(obj) {
+        replace_new_select = $(obj).val();
+        replace_old_select = replace_old_select_list[replace_old_select_list.length-1];
+        if (replace_old_select === replace_new_select){
+            replace_old_select = replace_old_select_list[replace_old_select_list.length-2];
+        }
+        $('#replace_tr_'+replace_old_select).attr('id','replace_tr_'+replace_new_select);
+        $('#origin_'+replace_old_select).attr('id',"origin_"+replace_new_select);
+        $('#replace_'+replace_old_select).attr('id','replace_'+replace_new_select);
+        $('#replace_del_'+replace_old_select).attr('id','replace_del_'+replace_new_select);
+        $('#replace_del_'+replace_new_select).attr('onclick',"replace_del_neirong('"+replace_new_select+"')");
+        replace_old_select_list.length = 0;
+        replace_old_select = '';   //记得清空一下，为下次做好准备
+        replace_get_type_list();
+    }
+    //获取剩余的可以设置的值
+    function replace_get_type_list() {
+        var arr = [];
+        replace_channel_type_list = JSON.parse(JSON.stringify(replace_origin_channel_type_list));
+        $.each(replace_channel_type_list,function(index,value){
+            if ($("#origin_"+value['name']).length>0){
+                arr.unshift(index);
+            }
+        });
+        for(var i=0;i<arr.length;i++){
+            replace_channel_type_list.splice(arr[i],1);
+        }
+        replace_set_old_select();
+    }
+    //重新设置已经存在的select
+    function replace_set_old_select(){
+        var channel_type_list_value = [];
+        var channel_type_list_title = [];
+        $.each(replace_channel_type_list,function(index,value){
+            channel_type_list_value.push(value.name);
+            channel_type_list_title.push(value.title);
+        });
+        $.each($(".replace"),function(index,value){
+            var selectValue = $(value).val();
+            var option_list = [];
+            $.each($(value).find("option"),function (index1,value1) {
+                if ($.inArray($(value1).val(), channel_type_list_value) == -1 && $(value1).attr('value') != selectValue){   //不存在数组且不为true,则删除该选项
+                    $(value1).remove();
+                }else{
+                    option_list.push($(value1).attr('value'));
+                }
+            });
+            //如果存在value数组，而不存在option，则加入option
+            for(var i=0;i<channel_type_list_value.length;i++){
+                if ($.inArray(channel_type_list_value[i], option_list) == -1){
+                    $(value).append("<option value='"+channel_type_list_value[i]+"'>"+channel_type_list_title[i]+"</option>");
+                }
+            }
+        });
+    }
+    //删除替换代码块
+    function replace_del_neirong(id) {
+        $("#replace_tr_"+id).remove();
+        replace_get_type_list();
+    }
+
+    // 判断输入框是否为空
+    function checkForm(type){
+        var is_page = $('input[name="is_page"]:checked').val();
+        if (is_page == '1' && ($('#page_a_rule').val() == '' || $('#page_list_rule').val() == '')){
+            showErrorMsg('文章分页时，页面正则代码和分页正则代码都不能为空！');
+            $('#page_a_rule').focus();
+            return false;
+        }
+        if($("#title").val() == ''){
+            showErrorMsg('标题匹配规则不能为空！');
+            $('#title').focus();
+            return false;
+        }
+        if($("#content").val() == ''){
+            showErrorMsg('文章内容规则不能为空！');
+            $('#content').focus();
+            return false;
+        }
+        layer_loading('正在处理');
+        $.ajax({
+            url: "{:weapp_url('Sitecollect/Sitecollect/contentset', ['_ajax'=>1])}" ,
+            type: 'POST',
+            dataType: 'JSON',
+            data: $('#post_form').serialize(),
+            success: function(res){
+                if (res.code == 1) {
+                    location.href = res.data[type];
+                }else{
+                    alert(res.msg);
+                }
+            },
+            error :function () {
+                alert("操作失败，请联系管理员");
+            }
+        });
+//        $('#post_form').submit();
+    }
+</script>
+{include file="footer.htm" /}

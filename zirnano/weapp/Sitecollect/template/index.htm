@@ -1,0 +1,219 @@
+{include file="header.htm" /}
+<body style="background-color: rgb(255, 255, 255); overflow: auto; cursor: default; -moz-user-select: inherit;">
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="bar.htm" /}
+    <div class="flexigrid">
+        <div class="mDiv">
+            <div class="ftitle">
+                <h3>文档列表</h3>
+                <h5>(共{$pageObj->totalRows}条数据)</h5>
+            </div>
+            <div title="刷新数据" class="pReload"><i class="fa fa-refresh"></i></div>
+            <form class="navbar-form form-inline" action="{:weapp_url('Sitecollect/Sitecollect/index')}" method="get" onsubmit="layer_loading('正在处理');">
+                {$searchform.hidden|default=''}
+                <div class="sDiv">
+                    <div class="sDiv2">
+                        <input type="text" size="30" name="keywords" class="qsbox" placeholder="搜索相关数据...">
+                        <input type="submit" class="btn" value="搜索">
+                    </div>
+                    <div class="sDiv2">
+                        <input type="button" class="btn" value="重置" onClick="window.location.href='{:weapp_url('Sitecollect/Sitecollect/index')}';">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="hDiv">
+            <div class="hDivBox">
+                <table cellspacing="0" cellpadding="0" style="width: 100%">
+                    <thead>
+                    <tr>
+                        <th class="sign w40" axis="col0">
+                            <div class="tc">选择</div>
+                        </th>
+                        <th abbr="article_show" axis="col5" class="w40">
+                            <div class="tc">ID</div>
+                        </th>
+                        <th abbr="article_title" axis="col3">
+                            <div class="tc">任务名称</div>
+                        </th>
+                        <th abbr="ac_id" axis="col4"  class="w100">
+                            <div class="tc">所属分类</div>
+                        </th>
+                        <th abbr="article_time" axis="col6" class="w100">
+                            <div class="tc">状态</div>
+                        </th>
+                        <th axis="col1" class="w300">
+                            <div class="tc">操作</div>
+                        </th>
+                        <th abbr="article_show" axis="col5" class="w60">
+                            <div class="tc">排序</div>
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="bDiv" style="height: auto;">
+            <div id="flexigrid" cellpadding="0" cellspacing="0" border="0">
+                <table style="width: 100%">
+                    <tbody>
+                    {empty name="list"}
+                        <tr>
+                            <td class="no-data" align="center" axis="col0" colspan="50">
+
+                                <i class="fa fa-exclamation-circle"></i>没有符合条件的记录,
+                                <a href="{:weapp_url('Sitecollect/Sitecollect/add')}">
+                                    添加第一条
+                                </a>
+                            </td>
+                        </tr>
+                    {else/}
+                        {volist name="list" id="vo"}
+                        <tr>
+                            <td class="sign">
+                                <div class="w40 tc"><input type="checkbox" name="ids[]" value="{$vo.id}"></div>
+                            </td>
+                            <td class="sort">
+                                <div class="w40 tc">
+                                    {$vo.id}
+                                </div>
+                            </td>
+                            <td style="width: 100%">
+                                <div class="tc">
+                                    <a href="{:weapp_url('Sitecollect/Sitecollect/edit',array('id'=>$vo['id']))}">{$vo.title}</a>
+                                </div>
+                            </td>
+                            <td >
+                                <div  class="w100 tc">
+                                    {$vo.typename}
+                                </div>
+                            </td>
+                            <td class="">
+                                <div class="w100 tc">
+                                    {if condition="$vo.status eq 0"}锁定{else /}启用{/if}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="w300 tc">
+                                    <a class="btn blue" href="javascript:void(0);" data-url="{:weapp_url('Sitecollect/Sitecollect/channel')}" data-id="{$vo.id}"  onClick="channelfun(this);">
+                                        <i class="fa fa-pencil-square-o"></i>采集
+                                    </a>
+                                    <a href="{:weapp_url('Sitecollect/Sitecollect/test',array('id'=>$vo['id']))}" class="btn blue"><i class="fa fa-pencil-square-o"></i>测试</a>
+                                    <a href="{:weapp_url('Sitecollect/Sitecollect/export',array('id'=>$vo['id']))}" class="btn blue"><i class="fa fa-pencil-square-o"></i>导出</a>
+                                    <a class="btn blue" href="javascript:void(0);" data-url="{:weapp_url('Sitecollect/Sitecollect/copy')}" data-id="{$vo.id}" onClick="copyfun(this);"><i class="fa fa-pencil-square-o"></i>复制</a>
+                                    <a href="{:weapp_url('Sitecollect/Sitecollect/edit',array('id'=>$vo['id']))}" class="btn blue"><i class="fa fa-pencil-square-o"></i>编辑</a>
+                                    <a class="btn red"  href="javascript:void(0)" data-url="{:weapp_url('Sitecollect/Sitecollect/del')}" data-id="{$vo.id}" onClick="delfun(this);"><i class="fa fa-trash-o"></i>删除</a>
+                                </div>
+                            </td>
+                            <td class="sort">
+                                <div class="w60 tc">
+                                    <input style="text-align: left;" type="text" onkeyup="this.value=this.value.replace(/[^\d]/g,'');" onpaste="this.value=this.value.replace(/[^\d]/g,'');" onchange="changeTableVal('weapp_sitecollect','id','{$vo.id}','sort_order',this);" size="4"  value="{$vo.sort_order}" />
+                                </div>
+                            </td>
+                        </tr>
+                        {/volist}
+                    {/empty}
+                    </tbody>
+                </table>
+            </div>
+            <div class="iDiv" style="display: none;"></div>
+        </div>
+        <div class="tDiv">
+            <div class="tDiv2">
+                <div class="fbutton checkboxall">
+                    <input type="checkbox" onclick="javascript:$('input[name*=ids]').prop('checked',this.checked);">
+                </div>
+                <!--<div class="fbutton">-->
+                    <!--<a onclick="batch_del(this, 'ids');" data-url="{:weapp_url('Sitecollect/Sitecollect/del')}">-->
+                        <!--<div class="add" title="批量删除">-->
+                            <!--<span><i class="fa fa-close"></i>批量删除</span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <div class="fbutton">
+                    <a href="{:weapp_url('Sitecollect/Sitecollect/add')}">
+                        <div class="add" title="添加新任务">
+                            <span class="red"><i class="fa fa-plus"></i>添加新任务</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="fbutton">
+                    <a href="{:weapp_url('Sitecollect/Sitecollect/into')}">
+                        <div class="add" title="导入配置">
+                            <span class="red"><i class="fa fa-plus"></i>导入配置</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <!--分页位置-->
+        {$pageStr}
+    </div>
+</div>
+<script>
+    //编辑弹出
+    function editfun(obj) {
+        var url = $(obj).attr('data-url')+"&id="+$(obj).attr('data-id');
+        var index = layer.open({type: 2,title: '编辑任务',area: ['1300px', '600px'],fix: false, maxmin: false,content: url});
+    }
+    //分批次分页面采集单个任务
+    function channelfun(obj) {
+        var url = $(obj).attr('data-url')+"&id="+$(obj).attr('data-id');
+        var index = layer.open({type: 2,title: '开始生成',area: ['500px', '300px'],fix: false, maxmin: false,content: url});
+    }
+    /**
+     * 单个采集(一次全部)
+     */
+    function executefun(obj) {
+        layer_loading('正在处理');
+        $.ajax({
+            type : 'post',
+            url : $(obj).attr('data-url'),
+            data : {id:$(obj).attr('data-id'), _ajax:1},
+            dataType : 'json',
+            success : function(data){
+                layer.closeAll();
+                if(parseInt(data.code) == 1){
+                    layer.msg(data.msg, {icon: 1});
+//                    window.location.reload();
+                }else{
+                    layer.alert(data.msg, {icon: 2, title:false});
+                }
+            }
+        });
+    }
+    //单个复制
+    function copyfun(obj) {
+        layer_loading('正在处理');
+        $.ajax({
+            type : 'post',
+            url : $(obj).attr('data-url'),
+            data : {id:$(obj).attr('data-id'), _ajax:1},
+            dataType : 'json',
+            success : function(data){
+                layer.closeAll();
+                if(parseInt(data.code) == 1){
+                    layer.msg(data.msg, {icon: 1});
+                    window.location.reload();
+                }else{
+                    layer.alert(data.msg, {icon: 2, title:false});
+                }
+            }
+        });
+    }
+    $(document).ready(function(){
+        // 表格行点击选中切换
+        $('#flexigrid > table>tbody >tr').click(function(){
+            $(this).toggleClass('trSelected');
+        });
+
+        // 点击刷新数据
+        $('.fa-refresh').click(function(){
+            location.href = location.href;
+        });
+    });
+</script>
+{include file="footer.htm" /}

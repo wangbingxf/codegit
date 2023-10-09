@@ -1,0 +1,72 @@
+{include file="header.htm" /}
+{load href="__PUBLIC__/plugins/Ueditor/ueditor.config.js" /}
+{load href="__PUBLIC__/plugins/Ueditor/ueditor.all.min.js" /}
+{load href="__PUBLIC__/plugins/Ueditor/lang/zh-cn/zh-cn.js" /}
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="edit_bar.htm" /}
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label >采集网页</label>
+                </dt>
+                <dd class="opt">
+                    <span>{$url_content}</span>
+                </dd>
+            </dl>
+            {volist name="content_list" id="vo"}
+            {notempty name="$vo.content"}
+            <dl class="row">
+                <dt class="tit">
+                    <label >{$vo.title}</label>
+                </dt>
+                <dd class="opt">
+                    {if condition="$vo.name eq 'litpic'"}
+                    <span><img src="{$vo.content}"></span>
+                    {elseif condition="$vo.name eq 'content'"/}
+                    <textarea class="span12 ckeditor" id="content" data-func="content_fun" name="content" title="">{$vo.content}</textarea>
+                    {else /}
+                    <span>{$vo.content}</span>
+                    {/if}
+                </dd>
+            </dl>
+            {/notempty}
+            {/volist}
+            <div class="bot">
+                <a href="{:weapp_url('Sitecollect/Sitecollect/contentset',['id'=>$row.id])}"  class="ncap-btn-big ncap-btn-green">返回上一步进行修改</a>
+                <a href="{:weapp_url('Sitecollect/Sitecollect/index')}"  class="ncap-btn-big ncap-btn-green">仅保存</a>
+                <a href="JavaScript:void(0);" href="javascript:void(0);" data-url="{:weapp_url('Sitecollect/Sitecollect/channel')}" data-id="{$row.id}" onClick="channelfun(this);" class="ncap-btn-big ncap-btn-green">保存并开始采集</a>
+            </div>
+        </div>
+</div>
+<script>
+    UE.getEditor('content',{
+        serverUrl :"{:url('Ueditor/index',array('savepath'=>'ueditor'))}",
+        zIndex: 999,
+        initialFrameWidth: "100%", //初化宽度
+        initialFrameHeight: 450, //初化高度
+        focus: false, //初始化时，是否让编辑器获得焦点true或false
+        maximumWords: 99999,
+        removeFormatAttributes: 'class,style,lang,width,height,align,hspace,valign',//允许的最大字符数 'fullscreen',
+        pasteplain:false, //是否默认为纯文本粘贴。false为不使用纯文本粘贴，true为使用纯文本粘贴
+        autoHeightEnabled: false,
+        toolbars: ueditor_toolbars
+    });
+
+    //必须在提交前渲染编辑器；
+    function content_fun() {
+        //判断编辑模式状态:0表示【源代码】HTML视图；1是【设计】视图,即可见即所得；-1表示不可用
+        if(UE.getEditor("content").queryCommandState('source') != 0) {
+            UE.getEditor("content").execCommand('source'); //切换到【设计】视图
+        }
+    }
+    //分批次分页面采集单个任务
+    function channelfun(obj) {
+        var url = $(obj).attr('data-url')+"&id="+$(obj).attr('data-id');
+        var index = layer.open({type: 2,title: '开始生成',area: ['500px', '300px'],fix: false, maxmin: false,content: url});
+    }
+</script>
+{include file="footer.htm" /}

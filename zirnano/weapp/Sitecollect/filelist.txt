@@ -1,0 +1,6 @@
+application/plugins/controller/Sitecollect.php
+data/schema/ey_weapp_sitecollect.php
+data/schema/ey_weapp_sitecollet_record.php
+data/schema/ey_weapp_sitecollet_rule.php
+data/schema/ey_weapp_sitecollet_urllist.php
+weapp/Sitecollect

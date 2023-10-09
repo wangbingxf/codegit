@@ -1,0 +1,38 @@
+{include file="header.htm" /}
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="bar.htm" /}
+    <form class="form-horizontal" id="post_form" action="{:weapp_url('Sitecollect/Sitecollect/into')}" method="post">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="encode">任务规则</label>
+                </dt>
+                <dd class="opt">
+                    <textarea rows="20" cols="160" id="encode" name="encode" style="height:450px;" ></textarea>
+                </dd>
+            </dl>
+        </div>
+        <div class="bot">
+            <a href="JavaScript:void(0);" onclick="checkForm();" class="ncap-btn-big ncap-btn-green" id="submitBtn">导入</a>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    // 判断输入框是否为空
+    function checkForm(){
+        if($('input[name=encode]').val() == ''){
+            showErrorMsg('任务规则不能为空！');
+            $('input[name=encode]').focus();
+            return false;
+        }
+
+
+        layer_loading('正在处理');
+        $('#post_form').submit();
+    }
+</script>
+{include file="footer.htm" /}

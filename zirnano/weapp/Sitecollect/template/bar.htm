@@ -1,0 +1,48 @@
+
+    <div class="fixed-bar">
+        <div class="item-title"><a class="back" href="{if condition="'Sitecollect' == $Request.param.sc && 'index' == $Request.param.sa"}{:url("Weapp/index")}{else /}{:weapp_url("Sitecollect/Sitecollect/index")}{/if}" title="返回列表"><i class="fa fa-arrow-circle-o-left"></i></a>
+            <div class="subject">
+                <h3>{$weappInfo['name']}</h3>
+                <h5></h5>
+            </div>
+            <ul class="tab-base nc-row">
+                <li>
+                {eq name="$Request.param.sa" value="index"}
+                    <a href="javascript:void(0);" class="tab current"><span>任务列表</span></a>
+                {else /}
+                    <a href="{:weapp_url("Sitecollect/Sitecollect/index")}" class="tab"><span>任务列表</span></a>
+                {/eq}
+                </li>
+
+                <!--<li>-->
+                <!--{range name="$Request.param.sa" value="add" type='in'}-->
+                    <!--<a href="javascript:void(0);" class="tab current"><span>添加任务</span></a>-->
+                <!--{else /}-->
+                    <!--<a href="{:weapp_url("Sitecollect/Sitecollect/add")}" class="tab"><span>添加任务</span></a>-->
+                <!--{/range}-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--{range name="$Request.param.sa" value="into" type='in'}-->
+                    <!--<a href="javascript:void(0);" class="tab current"><span>导入任务</span></a>-->
+                    <!--{else /}-->
+                    <!--<a href="{:weapp_url("Sitecollect/Sitecollect/into")}" class="tab"><span>导入任务</span></a>-->
+                    <!--{/range}-->
+                <!--</li>-->
+                <li>
+                    {range name="$Request.param.sa" value="record" type='in'}
+                    <a href="javascript:void(0);" class="tab current"><span>历史记录</span></a>
+                    {else /}
+                    <a href="{:weapp_url("Sitecollect/Sitecollect/record")}" class="tab"><span>历史记录</span></a>
+                    {/range}
+                </li>
+                <li>
+                    {eq name="$Request.param.sa" value="doc"}
+                    <a href="javascript:void(0);" class="tab current"><span>使用指南</span></a>
+                    {else /}
+                    <a href="{:weapp_url("Sitecollect/Sitecollect/doc")}" class="tab"><span>使用指南</span></a>
+                    {/eq}
+                </li>
+
+            </ul>
+        </div>
+    </div>
